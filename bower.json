@@ -1,0 +1,23 @@
+{
+  "name": "rock-events",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Andrey Kogut <andreyko.ol@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^3.0.3",
+    "reset-css": "^2.0.2011012603",
+    "jquery": "^2.2.0"
+  }
+}

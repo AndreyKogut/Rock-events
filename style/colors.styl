@@ -1,0 +1,46 @@
+
+$blue = #2089f4
+$light-blue = #6ac7cd
+$grad-color-1 = #6f156c
+$grad-color-2 = #00601b
+$grad-color-3 = #fd7c00
+$grad-bg-light = #2a1834
+$grad-bg = #252f53
+$grad-bg-dark = #2f2c56
+$grad-opacity = 0.13
+$grad-hover-color-1 = #0a00b2
+$grad-hover-color-2 = #6bc8cd
+$grad-hover-bg = rgba(54,40,86,0.77)
+$grad-hover-opacity = 0.7
+$grad-no-hover-opacity = 0.58
+$grad-pict-bot = #2f2c56
+$mega-dark-purple = #3c4159
+$dark-purple = #616991
+$medium-purple = #9996c4
+$light-purple = #98a0c5
+$light-gray = #2a2939
+$dark-grey = #121121
+
+.gradient-bg
+  position relative
+  &:before
+    content ""
+    position absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background linear-gradient(21deg, $grad-color-1 ,$grad-color-2 , $grad-color-3);
+    opacity $grad-opacity
+    display: block
+  &_light
+    background: $grad-bg-light
+  &_medium
+    background $grad-bg
+  &_dark
+    background: $grad-bg-dark
+
+
+
+
+
