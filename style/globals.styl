@@ -19,6 +19,25 @@ a
 body
   font 500 16px 'Roboto'
 
+.gradient-bg
+  position relative
+  &:before
+    content ""
+    position absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background linear-gradient(21deg, $grad-color-1 ,$grad-color-2 , $grad-color-3);
+    opacity $grad-opacity
+    display: block
+  &_light
+    background: $grad-bg-light
+  &_medium
+    background $grad-bg
+  &_dark
+    background: $grad-bg-dark
+
 .content
   width 100%
   max-width: 1200px
@@ -63,26 +82,11 @@ body
    padding-top: 20px
    padding-bottom 20px
    background rgba(0,0,0,0.2)
+
  .l-concert
    padding-top: 35px
    padding-bottom 125px
    font-size 0
 
-.gradient-bg
-  position relative
-  &:before
-    content ""
-    position absolute
-    top: 0
-    bottom: 0
-    left: 0
-    right: 0
-    background linear-gradient(21deg, $grad-color-1 ,$grad-color-2 , $grad-color-3);
-    opacity $grad-opacity
-    display: block
-  &_light
-    background: $grad-bg-light
-  &_medium
-    background $grad-bg
-  &_dark
-    background: $grad-bg-dark
+ .l-about
+   padding-top 70px
