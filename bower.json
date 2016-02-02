@@ -18,6 +18,9 @@
   "dependencies": {
     "normalize-css": "^3.0.3",
     "reset-css": "^2.0.2011012603",
-    "jquery": "^2.2.0"
+    "jquery": "^2.2.0",
+    "fancybox": "^2.1.5",
+    "nanoscroller": "^0.8.7",
+    "malihu-custom-scrollbar-plugin": "^3.1.3"
   }
 }

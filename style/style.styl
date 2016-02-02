@@ -75,7 +75,6 @@
       border-bottom-left-radius 32px
       background #101320
       max-height 150px
-      overflow-y scroll
       &:after
        display none
      .l-sort__item
@@ -88,6 +87,7 @@
        padding 10px 33px
        background transparent
        box-sizing border-box
+       padding-right 5px
        width 100%
        &:hover
         color #fff
@@ -121,6 +121,8 @@
    box-sizing border-box
    position relative
    cursor pointer
+   overflow hidden
+   vertical-align: middle;
    &:after
     content ""
     background url(../img/list_arrow.png) top center no-repeat
@@ -446,6 +448,7 @@
   background: rgba(255,255,255,0.1)
   width 31.6%
   box-sizing border-box
+  display: inline-block
   .concert-timer
     border-bottom 1px solid rgba(255,255,255,0.05)
     &__header
@@ -498,7 +501,6 @@
       content 'Min'
 .recommendations
    padding-top 25px
-   padding-bottom 20px
    &__h
      font-size 16px
      font-weight 700
@@ -514,3 +516,96 @@
      border-radius 50%
      line-height 30px
      vertical-align middle
+.concert-body
+  width 68.4%
+  display: inline-block
+  box-sizing border-box
+  padding-left 30px
+  padding-top 18px
+  p
+    color #fff
+    font-size 14px
+    margin-bottom 25px
+    line-height 2
+.gallery
+  margin 0 -10px
+  &__fancy-link
+    display: block
+    position relative
+    overflow hidden
+    z-index 2
+  &__item
+    display: inline-block
+    padding 0 10px
+    box-sizing border-box
+    margin-bottom 20px
+    cursor pointer
+    &_small
+      width 25%
+    &_big
+      width 50%
+    &_img-grad
+      position relative
+      z-index 1
+      &:after
+        content ''
+        position absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: block
+        background linear-gradient(0, $gallery-grad-color-1, $gallery-grad-color-2)
+        opacity $gallery-grad-opacity
+        z-index 2
+    &_video-grad
+      position relative
+      z-index 1
+      opacity 0.8
+      &:after
+        content ''
+        position absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: block
+        background linear-gradient(0, $grad-hover-color-1, $grad-hover-color-2)
+        opacity $gallery-video-grad-opacity
+        z-index 2
+      &:before
+        content ''
+        position absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        display: block
+        background url(../img/play_but.png) center  center  no-repeat rgba(0,0,0,0.3)
+        z-index 3
+      &:hover
+        opacity 1
+  &__video,
+  &__img
+    width auto
+    min-width 100%
+    border-radius 5px
+    z-index 1
+    position relative
+iframe
+  display none
+
+
+/* customizing scroll */
+.mCSB_inside > .mCSB_container
+  margin-right 10px
+
+.mCSB_scrollTools .mCSB_draggerContainer
+  height 80%
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  width 1px
+.mCSB_scrollTools .mCSB_draggerRail
+  width 1px
+
+  /* end */

@@ -5,6 +5,7 @@
     <title>Rock bands</title>
     <link rel="stylesheet" href="includes/reset.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="includes/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -53,9 +54,9 @@
             </li>
         </ul>
         </div>
-        <div id="everywhere" class="l-sort__items_small l-sort__items f-l">
+        <div id="everywhere" class="l-sort__items_small l-sort__items  f-l">
             <div class="l-sort__header l-sort__header_spec">Everywhere</div>
-            <ul class="l-sort__list l-sort__list_spec">
+            <ul class="l-sort__list l-sort__list_spec setScroll">
                 <li class="l-sort__item">
                     <input type="radio" name="country" class="l-sort__but" value="" id="countryAll" checked><label for="countryAll" class="l-sort__label">Everywhere</label>
                 </li>
@@ -262,6 +263,8 @@
 </footer>
 <div id="scrollTop"></div>
 <script src="includes/jquery.js"></script>
+<script src="includes/jquery.mCustomScrollbar.js"></script>
+<script src="includes/jquery.mousewheel.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

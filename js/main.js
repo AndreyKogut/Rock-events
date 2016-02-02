@@ -26,3 +26,18 @@ $(window).scroll(function(){
 scrollBut.bind('click',function(){
     $('body').animate({scrollTop:0}, 500);
 });
+
+$(document).ready(function() {
+    $('.fancybox').fancybox();
+});
+
+(function($){
+    $(window).load(function(){
+        $(".setScroll").mCustomScrollbar({
+            scrollbarPosition : 'inside',
+            autoHideScrollbar : true,
+            autoDraggerLength : false
+
+        });
+    });
+})(jQuery);
