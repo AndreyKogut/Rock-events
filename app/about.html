@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="includes/reset.css">
     <link rel="stylesheet" href="includes/jquery.fancybox.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="includes/responsive-tabs.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -15,8 +16,8 @@
             <nav class="navigation cf">
                 <ul class="navigation__items">
                     <li class="logo f-l"><a href="" class="logo__link logo-icon"></a></li>
-                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link active">Concerts</a></li>
-                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link">Groups</a></li>
+                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link ">Concerts</a></li>
+                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link active">Groups</a></li>
                     <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link">Genre</a></li>
                     <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link">Calendar</a></li>
                     <li class="navigation__item f-r"><a href="" class=" button button_list-item">My account</a></li>
@@ -27,7 +28,7 @@
     <div class="l-breadcrumbs">
         <div class="content">
             <ul class="l-breadcrumbs__list">
-                <li class="l-breadcrumbs__item"><a href="" class="l-breadcrumbs__link">Concerts</a></li>
+                <li class="l-breadcrumbs__item"><a href="" class="l-breadcrumbs__link">Groups</a></li>
                 <li class="l-breadcrumbs__item"><a href="" class="l-breadcrumbs__link">Red Hot Chili Peppers</a></li>
             </ul>
         </div>
@@ -61,8 +62,8 @@
             <aside class="group-concerts-list f-r">
                 <h4 class="group-concerts-list__header calendar-icon-t">Next concerts</h4>
                 <ul class="group-concerts-list__items">
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -72,8 +73,8 @@
                             <p class="group-concerts-list__price f-r">$120-500</p>
                         </a>
                     </li>
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -83,8 +84,8 @@
                             <p class="group-concerts-list__price f-r">$120-500</p>
                         </a>
                     </li>
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -94,8 +95,8 @@
                             <p class="group-concerts-list__price f-r">$120-500</p>
                         </a>
                     </li>
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -105,8 +106,8 @@
                             <p class="group-concerts-list__price f-r">$120-500</p>
                         </a>
                     </li>
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -116,8 +117,8 @@
                             <p class="group-concerts-list__price f-r">$120-500</p>
                         </a>
                     </li>
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -127,8 +128,8 @@
                             <p class="group-concerts-list__price f-r">$120-500</p>
                         </a>
                     </li>
-                    <li class="group-concerts-list__item cf">
-                        <a href="" class="group-concerts-list__link">
+                    <li class="group-concerts-list__item ">
+                        <a href="" class="group-concerts-list__link cf">
                             <p class="group-concerts-list__place">
                                 Belorus, Minsk
                                 <span class="group-concerts-list__date ">
@@ -140,6 +141,254 @@
                     </li>
                 </ul>
             </aside>
+                <div  id="tabs-block" class="about-body">
+                    <ul  class="about-body__list">
+                        <li class="about-body__item"><a href="#tab-1" class="about-body__link active"> About band </a></li>
+                        <li class="about-body__item"><a href="#tab-2" class="about-body__link"> Songs </a></li>
+                        <li class="about-body__item"><a href="#tab-3" class="about-body__link"> Similar artists </a></li>
+                        <li class="about-body__item"><a href="#tab-4" class="about-body__link"> Comments </a></li>
+                    </ul>
+
+                    <div id="tab-1">
+                        <p>Group «Red Hot Chili Peppers» in Kiev, February 19th, 2016 at the Sports Palace.</p>
+                        <p>Legendary "Red Hot Chili Peppers" returned to Kiev with a big concert in the framework of a grand world tour
+                            50th Anniversary  World Tour 2015 / 2016.2015 - a jubilee year for the group "Red Hot Chili Peppers." The team,
+                            which can rightly be called the most popular rock - the team is 50 years old!</p>
+                        <p>For half a century «Red Hot Chili Peppers" represent real quality rock music and stunning in its drive and energy concerts, invariably accompanied anshlagami. Grup «Red Hot Chili Peppers» looks forward to meeting
+                            with the audience and invites mark the fiftieth anniversary of its history at a live concert on February 19 in Kiev Sports Palace in the framework of large-scale global turne.Kontsert «Red Hot Chili Peppers» - this is a real spectacle
+                            of emotions and the ability to once again hear the legendary hits. Crazy drive, an amazing show - all this is waiting
+                            for those who are going to attend a concert in Kiev.</p>
+                        <p>Jubilee 2015 «Red Hot Chili Peppers» began with the presentation of the movie «Forever and a Day». The famous
+                            film director Katja von Garnier ("Bandidas", "East Wind") was accompanied by «Red Hot Chili Peppers» in their farewell
+                            tour «Final Sting-Tour», and 18 months captured unique footage - moments of communion between the members.</p>
+                        <p>Group «Red Hot Chili Peppers» in Kiev, February 19th, 2016 at the Sports Palace.</p>
+                        <p>Legendary "Red Hot Chili Peppers" returned to Kiev with a big concert in the framework of a grand world tour
+                            50th Anniversary  World Tour 2015 / 2016.2015 - a jubilee year for the group "Red Hot Chili Peppers." The team,
+                            which can rightly be called the most popular rock - the team is 50 years old!</p>
+                        <p>For half a century «Red Hot Chili Peppers" represent real quality rock music and stunning in its drive and energy concerts, invariably accompanied anshlagami. Grup «Red Hot Chili Peppers» looks forward to meeting
+                            with the audience and invites mark the fiftieth anniversary of its history at a live concert on February 19 in Kiev Sports Palace in the framework of large-scale global turne.Kontsert «Red Hot Chili Peppers» - this is a real spectacle
+                            of emotions and the ability to once again hear the legendary hits. Crazy drive, an amazing show - all this is waiting
+                            for those who are going to attend a concert in Kiev.</p>
+                        <p>Jubilee 2015 «Red Hot Chili Peppers» began with the presentation of the movie «Forever and a Day». The famous
+                            film director Katja von Garnier ("Bandidas", "East Wind") was accompanied by «Red Hot Chili Peppers» in their farewell
+                            tour «Final Sting-Tour», and 18 months captured unique footage - moments of communion between the members.</p>
+                        <ul class="gallery">
+                            <li class="gallery__item  gallery__item_small">
+                                <a href="img/rhcp_1.jpg" class="gallery__fancy-link gallery__item_img-grad fancybox" rel="gallery"> <img src="img/rhcp_1.jpg" alt="" class="gallery__img"></a>
+                            </li>
+                            <li class="gallery__item  gallery__item_small">
+                                <a href="img/rhcp_2.jpg" class="gallery__fancy-link gallery__item_img-grad fancybox" rel="gallery"> <img src="img/rhcp_2.jpg" alt="" class="gallery__img" rel="gallery"></a>
+                            </li>
+                            <li class="gallery__item  gallery__item_small">
+                                <a href="img/rhcp_3.jpg" class="gallery__fancy-link gallery__item_img-grad fancybox" rel="gallery"><img src="img/rhcp_3.jpg" alt="" class="gallery__img"></a>
+                            </li>
+                            <li class="gallery__item  gallery__item_small">
+                                <a href="img/rhcp_4.jpg" class="gallery__fancy-link gallery__item_img-grad fancybox" rel="gallery"><img src="img/rhcp_4.jpg" alt="" class="gallery__img"></a>
+                            </li>
+                            <li class="gallery__item  gallery__item_big">
+                                <a href="#video1" class="gallery__fancy-link gallery__item_video-grad fancybox" rel="gallery"><video poster="img/rhcp_5.jpg" class="gallery__video"></video></a>
+                            </li>
+                            <li class="gallery__item  gallery__item_big">
+                                <a href="#video1" class="gallery__fancy-link gallery__item_video-grad fancybox" rel="gallery">
+                                    <video poster="img/rhcp_6.jpg" class="gallery__video"></video>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="tab-2">
+                        <table class="songs-list">
+                            <thead class="songs-list__header">
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">№</td>
+                                    <td class="songs-list__td">Name</td>
+                                    <td class="songs-list__td">Album</td>
+                                    <td class="songs-list__td">D.</td>
+                                </tr>
+                            </thead>
+                            <tbody class="songs-list__body">
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                                <tr class="songs-list__row">
+                                    <td class="songs-list__td">1</td>
+                                    <td class="songs-list__td">dfsdfsdfsdfsd</td>
+                                    <td class="songs-list__td">dfsdfsdf sdf sdf</td>
+                                    <td class="songs-list__td_dark">3:30</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                    <div id="tab-3">
+                        <ul class="gallery-group">
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                   <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                     </section>
+                                </a>
+
+                           </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+                            <li class="gallery-group__item">
+                                <a href="#" class="gallery-group__link">
+                                    <img src="img/similar_groups.jpg" alt="" class="gallery-group__img">
+                                    <section class="gallery-group__description">
+                                        <h3 class="gallery-group__group-name">Incribus</h3>
+                                        <ul class="hash-list">
+                                            <li class="hash-list__item">FunkMetal</li>
+                                            <li class="hash-list__item">FunkRok</li>
+                                            <li class="hash-list__item">Metal</li>
+                                        </ul>
+                                    </section>
+                                </a>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div id="tab-4"> 4 </div>
+                </div>
             </div>
         </div>
         </article>
@@ -200,6 +449,7 @@
 <div id="scrollTop"></div>
 <script src="includes/jquery.js"></script>
 <script src="includes/jquery.fancybox.pack.js"></script>
+<script src="includes/jquery.responsiveTabs.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

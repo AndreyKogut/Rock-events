@@ -37,7 +37,14 @@ $(document).ready(function() {
             scrollbarPosition : 'inside',
             autoHideScrollbar : true,
             autoDraggerLength : false
-
         });
     });
 })(jQuery);
+
+
+$('#tabs-block').responsiveTabs({
+    scrollToAccordion: true,
+    rotate: false,
+    startCollapsed: 'accordion',
+    enabled : 0
+});

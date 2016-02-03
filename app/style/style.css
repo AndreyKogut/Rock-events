@@ -306,6 +306,8 @@ body {
 .navigation__link:hover,
 .navigation__link.active {
   border: 1px solid #fff;
+  color: #fff;
+  text-decoration: none;
 }
 .navigation_dark .navigation__link {
   color: #616991;
@@ -314,10 +316,12 @@ body {
 }
 .navigation_dark .navigation__link.active {
   border-color: #616991;
+  text-decoration: none;
 }
 .navigation_dark .navigation__link:hover {
   color: #98a0c5;
   border-color: #98a0c5;
+  text-decoration: none;
 }
 .l-header__h {
   font-weight: 700;
@@ -401,6 +405,7 @@ body {
 }
 .l-sort__items.active .l-sort__label:hover {
   color: #fff;
+  text-decoration: none;
 }
 .l-sort__items.active .l-sort__header:after {
   -webkit-transform: rotate(180deg);
@@ -470,6 +475,7 @@ body {
 }
 .l-sort__label:hover {
   color: #fff;
+  text-decoration: none;
 }
 .l-sort__but {
   -webkit-appearance: none;
@@ -715,6 +721,8 @@ body {
 }
 .latest-concert__link:hover {
   background: rgba(255,255,255,0.2);
+  text-decoration: none;
+  color: #fff;
 }
 .latest-concert__time {
   display: block;
@@ -959,6 +967,7 @@ body {
 }
 .gallery {
   margin: 0 -10px;
+  font-size: 0;
 }
 .gallery__fancy-link {
   display: block;
@@ -1086,6 +1095,8 @@ iframe {
 }
 .about-header__link:hover {
   background: rgba(255,255,255,0.2);
+  color: #9996c4;
+  text-decoration: none;
 }
 .about-header__header {
   color: #fff;
@@ -1108,6 +1119,7 @@ iframe {
   font-size: 14px;
   color: #fff;
   display: block;
+  text-transform: capitalize;
 }
 .group-statistic__link_border {
   border: 2px solid #fff;
@@ -1153,13 +1165,19 @@ iframe {
 .group-concerts-list__item {
   background: rgba(0,0,0,0.1);
   display: block;
-  padding: 22px 18px;
 }
 .group-concerts-list__item:not(:first-child) {
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 .group-concerts-list__link {
   color: #fff;
+  display: block;
+  padding: 22px 18px;
+}
+.group-concerts-list__link:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  text-decoration: none;
 }
 .group-concerts-list__place {
   font-size: 18px;
@@ -1182,4 +1200,157 @@ iframe {
 .content-bg-white_margin-top {
   margin-top: -76px;
   padding-bottom: 110px;
+}
+.about-body {
+  width: 68.4%;
+  display: inline-block;
+  padding-right: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.about-body p {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 25px;
+  line-height: 2;
+}
+.about-body__list {
+  height: 76px;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: table;
+  width: 100%;
+}
+.about-body__item {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: center;
+  width: 25%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.about-body__link {
+  font-size: 14px;
+  color: #9996c4;
+  padding: 12px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+.about-body__link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/* tabs */
+.r-tabs .r-tabs-tab {
+  display: table-cell;
+}
+li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link {
+  border-color: #fff;
+  color: #fff;
+  text-decoration: none;
+}
+.r-tabs-accordion-title {
+  height: 76px;
+  vertical-align: bottom;
+  line-height: 76px;
+  padding-left: 19px;
+  border-bottom: 1px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.r-tabs-accordion-title a {
+  color: #fff;
+  display: block;
+}
+.r-tabs .r-tabs-panel {
+  padding: 30px 10px 5px 0;
+}
+.songs-list {
+  width: 100%;
+}
+.songs-list__header {
+  background: rgba(0,0,0,0.3);
+}
+.songs-list__row {
+  text-indent: 15px;
+}
+.songs-list__td {
+  font-size: 14px;
+  color: #9996c4;
+  line-height: 2.5;
+}
+.songs-list__td_dark {
+  color: #646280;
+}
+.songs-list__body .songs-list__row:nth-child(2n) {
+  background: rgba(0,0,0,0.02);
+}
+.songs-list__body .songs-list__row:nth-child(2n+1) {
+  background: rgba(255,255,255,0.02);
+}
+.gallery-group {
+  font-size: 0;
+  display: block;
+  margin: 0 -15px;
+}
+.gallery-group__item {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+  display: inline-block;
+  position: relative;
+}
+.gallery-group__link {
+  display: block;
+  position: relative;
+}
+.gallery-group__link:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: block;
+  z-index: 1;
+  background: #262232;
+  opacity: 0.8;
+}
+.gallery-group__link:hover:before {
+  opacity: 0.5;
+}
+.gallery-group__img {
+  width: 100%;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+.gallery-group__description {
+  bottom: 20px;
+  left: 20px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+}
+.gallery-group__group-name {
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.hash-list {
+  display: block;
+}
+.hash-list__item {
+  display: inline-block;
+  margin-right: 4px;
+  font-size: 14px;
+  color: #9996c4;
+}
+.hash-list__item:before {
+  content: '#';
 }
