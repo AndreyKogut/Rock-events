@@ -5,6 +5,7 @@
 .navigation
   &__item
     display: inline-block
+    position relative
   &__link
     color: #fff
     display: block
@@ -48,7 +49,7 @@
    background: rgba(0,0,0,0.6)
    display inline-block
    position relative
-   z-index 999999
+   z-index 10
    border-radius 32px
    text-align justify
    padding 5px
@@ -68,6 +69,8 @@
      border-bottom-left-radius 0
      .l-sort__header
       color #fff
+     .l-sort__item
+      display block
      .l-sort__list
       display block
       position absolute
@@ -612,26 +615,83 @@ iframe
 
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
   width 1px
+
 .mCSB_scrollTools .mCSB_draggerRail
   width 1px
 
   /* end */
 
 .about-header
-  margin-bottom 135px
-  text-align center
+  &_head
+    text-align center
+    margin-bottom 135px
+    .about-header__img
+      width 53%
+    .about-header__styles
+      padding-left 25px
+    .about-header__style
+      &:not(:last-child)
+       margin-bottom 10px
+    .about-header__link
+      font-size 14px
+    .about-header__header
+      font-size 36px
+      margin-bottom 30px
+    .style-wrapper
+      position: relative
+      display block
+      font-size 0
+      margin-bottom 30px
+    .style-list-wrapper
+      position: absolute
+      vertical-align middle
+      height 100%
+      width 23.5%
+      right: 0
+      top 0
+      text-align left
+  &_prev
+    font-size 0
+    .about-header__img
+      width 23%
+      display: inline-block
+      vertical-align middle
+    .about-header__style
+      display: inline-block
+      &:not(:last-child)
+        margin-right 10px
+        margin-bottom 10px
+    .about-header__link
+      font-size 12px
+    .about-header__header
+      font-size 34px
+      margin-bottom 10px
+    .group-statistic
+      width 34%
+      display: inline-block
+      vertical-align middle
+    .group-statistic__link_border
+      border-width 1px
+    .style-list-wrapper
+      display: inline-block
+      width 43%
+      vertical-align middle
+      padding-left 30px
+      padding-right 5px
+      box-sizing border-box
   &__img
-    width 53%
     border-radius 7px
   &__styles
     display: inline-block
-    padding-left 25px
   &__style
     display: block
-    &:not(:last-child)
-      margin-bottom 10px
+  &__group
+    color #fff
+    text-decoration none
+    &:hover
+      color $blue
+      text-decoration none
   &__link
-    font-size 14px
     color $medium-purple
     padding 12px 20px
     background: rgba(0,0,0,.2)
@@ -643,12 +703,11 @@ iframe
       text-decoration none
   &__header
     color #fff
-    font-size 36px
     font-weight 500
     text-transform capitalize
-    margin-bottom 30px
 .group-statistic
   display: block
+  text-align center
   &__item
     display: inline-block
     &:not(:last-child)
@@ -659,27 +718,30 @@ iframe
     color #fff
     display: block
     text-transform capitalize
+    &:hover:before
+      background-image url(../img/band-sprite-icons-hover.png)
     &_border
       border 2px solid #fff
       border-radius 32px
       padding 0 21px
+      &:hover
+        color $blue
+        border-color: $blue
+        text-decoration none
     &_fans
       border-left 1px solid $dark-white
       color $dark-white
+      font-size 12px
       padding-left 16px
-.style-wrapper
-  position: relative
-  display block
-  font-size 0
-  margin-bottom 30px
-.style-list-wrapper
-  position: absolute
-  vertical-align middle
-  height 100%
-  width 23.5%
-  right: 0
-  top 0
-  text-align left
+  &__but
+    border: 1px solid $medium-purple;
+    border-radius: 32px;
+    padding: 0 21px;
+    color $medium-purple
+    text-transform uppercase
+    &:hover
+      color #fff
+      background: $medium-purple
 .group-concerts-list
   width 31.6%
   background: rgba(0,0,0,.12)
@@ -804,16 +866,16 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
     position: relative
   &__link
     display: block
-    position: relative
     &:before
       content ''
       position: absolute
-      top: 0
-      right: 0
-      left: 0
-      bottom: 0
+      top: 15px
+      right: 15px
+      left: 15px
+      bottom: 15px
       display: block
       z-index 1
+      border-radius 5px
       background: $gallery-group-before
       opacity $gallery-group-before-opasity
     &:hover:before
@@ -822,8 +884,8 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
     width 100%
     border-radius 5px
   &__description
-    bottom: 20px
-    left: 20px
+    bottom: 60px
+    left: 35px
     display: block
     position absolute
     z-index 1
@@ -831,14 +893,82 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
     color #fff
     font-size 22px
     text-transform uppercase
-    margin-bottom 15px
 .hash-list
   display: block
+  position absolute
+  bottom 30px
+  left 35px
+  z-index 13
   &__item
     display: inline-block
+  &__link
+    display: block
     margin-right 4px
     font-size 14px
     color $medium-purple
     &:before
       content '#'
+    &:hover
+      color #FFFFFF
+      &:before
+        color #fff
 
+.l-filters
+  &__item
+    display: inline-block
+    position relative
+    &:after
+      content: "";
+      background: url("../img/list_arrow.png") top center no-repeat;
+      width: 13px;
+      height: 6px;
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 16px;
+      z-index -1
+    &:not(:last-child)
+      margin-right 30px
+  &__select
+    padding 10px 30px 10px 20px
+    box-sizing border-box
+    appearance none
+    outline none
+    border: none
+    background: rgba(255,255,255,.1);
+    color $medium-purple
+    cursor pointer
+    border-radius 32px
+    font-size 14px
+  &__option
+    background: #313039
+  &__label
+    color $medium-purple
+    font-size 14px
+    margin-right 10px
+.filtered-element
+   padding 30px 0
+   &:nth-child(2n+1)
+    background: rgba(255,255,255,.03)
+.user-cabinet
+  position: absolute;
+  right: 0;
+  text-align: left;
+  display: none
+  width: 100%;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  background: rgba(255,255,255,0.1);
+  &__item
+    border-top: 1px solid rgba(255,255,255,.3)
+    padding-left: 16px;
+  &__link
+    color #fff
+    padding 3px 10px
+    padding-right 15px
+    display block
+    width 100%
+    box-sizing border-box
+    font-size 12px

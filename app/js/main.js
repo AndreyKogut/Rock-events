@@ -4,12 +4,13 @@ var scrollBut = $('#scrollTop');
 $(document).mouseup(function (e){
 
     if (everywhereDrop.is(e.target)) {
+
         everywhereDrop.toggleClass('active');
     } else if(everywhereDrop.has(e.target).length !== 0) {
-            if((e.target.nodeName.toLowerCase() == 'label') || $(e.target).hasClass('l-sort__header')) {
-                everywhereDrop.find('.l-sort__header').html(e.target.innerHTML);
-                everywhereDrop.toggleClass('active');
-            }
+        if((e.target.nodeName.toLowerCase() == 'label') || $(e.target).hasClass('l-sort__header')) {
+            everywhereDrop.find('.l-sort__header').html(e.target.innerHTML);
+            everywhereDrop.toggleClass('active');
+        }
     } else {
         everywhereDrop.removeClass('active');
     }
@@ -27,9 +28,8 @@ scrollBut.bind('click',function(){
     $('body').animate({scrollTop:0}, 500);
 });
 
-$(document).ready(function() {
-    $('.fancybox').fancybox();
-});
+
+
 
 (function($){
     $(window).load(function(){
@@ -39,12 +39,15 @@ $(document).ready(function() {
             autoDraggerLength : false
         });
     });
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
+
+    $('#tabs-block').responsiveTabs({
+        scrollToAccordion: true,
+        rotate: false,
+        startCollapsed: 'accordion',
+        enabled : 0
+    });
 })(jQuery);
 
-
-$('#tabs-block').responsiveTabs({
-    scrollToAccordion: true,
-    rotate: false,
-    startCollapsed: 'accordion',
-    enabled : 0
-});
