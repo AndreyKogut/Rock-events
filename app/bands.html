@@ -5,6 +5,7 @@
     <title>Rock events</title>
     <link rel="stylesheet" href="includes/reset.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="includes/selectize.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -37,35 +38,33 @@
         <div class="content lp">
             <ul class="l-filters__list">
                 <li class="l-filters__item"><label for="list1" class="l-filters__label">Country:</label>
-                    <select name="" id="list1" class="l-filters__select">
-                        <option value="" class="l-filters__option">Item1</option>
-                        <option value="" class="l-filters__option">Item2</option>
-                        <option value="" class="l-filters__option">Item3</option>
-                        <option value="" class="l-filters__option">Item4</option>
+                    <select name="" id="list1" class="l-filters__select filer l-filters__select_country">
+                        <option value="1" class="l-filters__option">Ukraine</option>
+                        <option value="2" class="l-filters__option">Russia</option>
+                        <option value="3" class="l-filters__option">England</option>
+                        <option value="4" class="l-filters__option">Poland</option>
                     </select>
                 </li>
                 <li class="l-filters__item"><label for="list2" class="l-filters__label">City:</label>
-                    <select name="" id="list2" class="l-filters__select">
-                        <option value="" class="l-filters__option">Item1</option>
-                        <option value="" class="l-filters__option">Item2</option>
-                        <option value="" class="l-filters__option">Item3</option>
-                        <option value="" class="l-filters__option">Item4</option>
+                    <select name="" id="list2" class="l-filters__select l-filters__select_city filer">
+                        <option value="1" class="l-filters__option">Kharkov</option>
+                        <option value="2" class="l-filters__option">Ivano-Frankivsk</option>
+                        <option value="3" class="l-filters__option">Odessa</option>
+                        <option value="4" class="l-filters__option">Kiev</option>
                     </select>
                 </li>
                 <li class="l-filters__item"><label for="list3" class="l-filters__label">Fans:</label>
-                    <select name="" id="list3" class="l-filters__select">
-                        <option value="" class="l-filters__option">Item1</option>
-                        <option value="" class="l-filters__option">Item2</option>
-                        <option value="" class="l-filters__option">Item3</option>
-                        <option value="" class="l-filters__option">Item4</option>
+                    <select name="" id="list3" class="l-filters__select l-filters__select_fans filer">
+                        <option value="1" class="l-filters__option">Up</option>
+                        <option value="2" class="l-filters__option">Down</option>
                     </select>
                 </li>
                 <li class="l-filters__item"><label for="list4" class="l-filters__label">Genre:</label>
-                    <select name="" id="list4" class="l-filters__select">
-                        <option value="" class="l-filters__option">Item1</option>
-                        <option value="" class="l-filters__option">Item2</option>
-                        <option value="" class="l-filters__option">Item3</option>
-                        <option value="" class="l-filters__option">Item4</option>
+                    <select name="" id="list4" class="l-filters__select l-filters__select_genre filer">
+                        <option value="1" class="l-filters__option">Hard rock</option>
+                        <option value="2" class="l-filters__option">Alternative</option>
+                        <option value="3" class="l-filters__option">Folk</option>
+                        <option value="4" class="l-filters__option selected">All</option>
                     </select>
                 </li>
             </ul>
@@ -246,6 +245,10 @@
 </footer>
 <div id="scrollTop"></div>
 <script src="includes/jquery.js"></script>
+<script src="includes/microplugin.js"></script>
+<script src="includes/sifter.js"></script>
+
+<script src="includes/selectize.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

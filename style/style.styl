@@ -914,32 +914,19 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
         color #fff
 
 .l-filters
+  &__select
+    &_country
+     min-width 150px
+    &_city
+     min-width 185px
+    &_fans
+     min-width 110px
+    &_genre
+     min-width 160px
   &__item
     display: inline-block
-    position relative
-    &:after
-      content: "";
-      background: url("../img/list_arrow.png") top center no-repeat;
-      width: 13px;
-      height: 6px;
-      display: block;
-      position: absolute;
-      right: 10px;
-      top: 16px;
-      z-index -1
     &:not(:last-child)
       margin-right 30px
-  &__select
-    padding 10px 30px 10px 20px
-    box-sizing border-box
-    appearance none
-    outline none
-    border: none
-    background: rgba(255,255,255,.1);
-    color $medium-purple
-    cursor pointer
-    border-radius 32px
-    font-size 14px
   &__option
     background: #313039
   &__label
@@ -972,3 +959,47 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
     width 100%
     box-sizing border-box
     font-size 12px
+
+  /* custom select */
+.selectize-control .selectize-input > input
+  display none !important
+.selectize-control.single .selectize-input:after
+  border-color $medium-purple transparent transparent transparent
+.selectize-input.items.full.has-options.has-items.focus.dropdown-active.input-active
+  border-bottom-left-radius 0
+  border-bottom-right-radius 0
+  color #fff
+.selectize-control.single .selectize-input.dropdown-active:after
+  border-color  transparent transparent #fff transparent
+.selectize-control
+  position: relative;
+  display: inline-block
+  vertical-align: middle;
+.selectize-input.items.full.has-options.has-items
+  border-radius 17px
+  color $medium-purple
+  padding 10px 50px 10px 20px
+  line-height 1
+  font-size 14px
+  background rgba(255,255,255,.1)
+  border none
+.selectize-dropdown [data-selectable],
+.selectize-dropdown .optgroup-header,
+.selectize-dropdown .active
+  padding: 3px 8px;
+  padding-left: 19px;
+  font-size: 12px;
+  color $medium-purple
+  border-top:1px solid rgba(255,255,255,.03)
+.selectize-dropdown .active,
+.selectize-dropdown .selected
+  background: transparent
+  color #fff
+
+
+.selectize-dropdown
+  background: #3e2933;
+  border-color transparent
+  border-bottom-right-radius  17px
+  border-bottom-left-radius  17px
+  width: 100% !important
