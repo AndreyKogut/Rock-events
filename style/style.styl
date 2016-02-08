@@ -16,6 +16,7 @@
     margin-left 10px
     vertical-align middle
     background url(../img/burger.png)
+    background-size: contain
     cursor pointer
   &__link
     color: #fff
@@ -240,10 +241,61 @@
         margin-top 8px
       .event-list__place
         margin-top 12px
+
+
+
+  &_normal-big
+    margin 0 -15px
+    margin-bottom 55px
+    .event-list__item
+      padding 0 15px
+      margin-bottom 15px
+      width 33.3333333%
+      display inline-block
+      position relative
+      &:hover
+        .event-list__link:after
+          opacity: $gallery-bg-color-opacity-hover
+    .event-list__group
+      font-size 35px
+      width 80%
+      display: inline-block
+      text-transform uppercase
+    .event-list__details
+      position absolute
+      bottom 38%
+      left 15px
+      right 15px
+      text-align center
+      max-width 100%
+    .event-list__link
+      &:after
+        top: 0
+        bottom: 0
+        left: 15px
+        right: 15px
+        background :$gallery-bg-color
+        opacity: $gallery-bg-color-opacity
+        display: block
+        border-radius 5px;
+    .group-statistic
+      position absolute
+      bottom 25px
+      left: 15px
+      right 15px
+      z-index 5
+    .event-list__groups-count
+      color #fff
+      font-weight: 700;
+      margin-top 12px
+      &:after
+        content ' Groups'
+        text-transform uppercase
+
   &_aside
     .event-list__item
       padding 0
-      margin-top: 20px
+      margin-top: 15px
       display block
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.53);
       &:hover
@@ -378,7 +430,8 @@
   margin-top 20px
   &__item
     display: inline-block
-    margin-right: 20px
+    &:not(:last-child)
+      margin-right: 20px
   &__link
     width 50px
     height 50px
@@ -1056,5 +1109,7 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
   border-bottom-right-radius  17px
   border-bottom-left-radius  17px
   width: 100% !important
+
+
 
 @require "media_960.styl"
