@@ -24,7 +24,7 @@ var scrollInit = function(elem){
     }
 };
 
-userCab.bind('click touchstart', function(){
+userCab.bind('click', function(){
 
     var  but = this;
     if(!$(but).find('.user-cabinet__head').hasClass('active')) {
@@ -38,7 +38,7 @@ userCab.bind('click touchstart', function(){
 
 });
 
-$(document).bind('mouseup touchend resize',function (e){
+$(document).bind('mouseup resize',function (e){
 
     if (everywhereDrop.is(e.target)) {
 
