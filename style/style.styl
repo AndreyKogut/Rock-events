@@ -181,6 +181,9 @@
 .event-list
   font-size 0
   text-align left
+  &__followers
+    color #fff
+    margin-top 10px
   &_normal
     margin 0 -4px
     margin-bottom 55px
@@ -292,6 +295,73 @@
         content ' Groups'
         text-transform uppercase
 
+  &_normal-medium
+    margin-bottom 55px
+    width 68%
+    display: inline-block
+    &:hover
+      .concert-header_preview
+        display none
+    .event-list__item
+      padding-right 30px
+      margin-bottom 15px
+      width 50%
+      display inline-block
+      position relative
+      &:hover
+        .event-list__link:after
+          opacity: $gallery-bg-color-opacity-hover
+    .concert-header_preview
+      display none
+    .event-list__group
+      font-size 35px
+      width 80%
+      display: inline-block
+      text-transform uppercase
+    .event-list__details
+      position absolute
+      bottom 38%
+      left 0
+      right 30px
+      text-align center
+      max-width 100%
+    .event-list__link
+      &:after
+        top: 0
+        bottom: 0
+        left: 0
+        right: 30px
+        background none
+        background :$gallery-bg-color
+        opacity: $gallery-bg-color-opacity
+        display: block
+        border-radius 5px;
+      &__concert:after
+        display none
+    .group-statistic
+      position absolute
+      bottom 25px
+      left: 0
+      right 30px
+      z-index 5
+    .event-list__groups-count
+      color #fff
+      font-weight: 700;
+      margin-top 12px
+      &:after
+        content ' Groups'
+        text-transform uppercase
+    .event-list__link_concert
+      .concert-header__h
+        text-transform uppercase
+      &:after
+        display none
+      &:hover
+        &:after
+          display block
+        .concert-header_preview
+          display block
+
   &_aside
     .event-list__item
       padding 0
@@ -335,7 +405,6 @@
     position relative
     overflow hidden
     box-sizing border-box
-    border-radius: 10px;
   &__img
     width 100%
     border-radius 5px
@@ -468,17 +537,59 @@
         color #fff
 .concert-header
   margin-bottom 30px
+  &__h
+    line-height 1
+    margin-bottom 10px
+  .event-list__link
+    position relative
+  &__followers
+    font-size 13px
+    color rgba(255,255,255,.7)
+    &:before
+      background url(../img/small-like.png) center center no-repeat
+      width 10px
+      height 10px
+      background-size contain
+      vertical-align middle
+      margin-right 5px
+      margin-bottom 1px
+  &_preview
+    position absolute
+    bottom 15%
+    left 0
+    right 30px
+    text-align center
+    max-width 100%
+    z-index 5
+    .concert-header__country,
+    .concert-header__date,
+    .concert-header__price
+      color #ffffff
+      font-size 15px
+      display inline-block
+      vertical-align middle
+      text-align center
+      margin-bottom 10px
+    .concert-header__price
+      border-top 1px solid rgba(255,255,255,.4)
+      padding-top 10px
+    .concert-header__place,
+    .concert-header__time
+      font-size 15px
+      display inline-block
+  &__groups-count
+    color #fff
   &-button
     margin-top 8px
   &__img
     width 31.6%
     display: inline-block
-    vertical-align top
+    vertical-align middle
     border-radius 5px
   &__info
     width 68.4%
     display: inline-block
-    vertical-align top
+    vertical-align middle
     padding-left 30px
     box-sizing border-box
   &__h
@@ -493,9 +604,10 @@
   &__item
     display: table-cell
     vertical-align middle
-    padding 0 5px
+    padding 0 10px
     position relative
     box-sizing border-box
+    width 33.33333%
     &:not(:last-child)
       border-right 1px solid rgba(255,255,255,0.1)
   &__list
@@ -510,13 +622,13 @@
   &__date,
   &__price
     color #ffffff
-    font-size 18px
+    font-size 14px
     display inline-block
     vertical-align middle
     text-align left
   &__place,
   &__time
-    font-size 14px
+    font-size 12px
     display block
 .concert-sidebar
   padding 20px
@@ -739,6 +851,7 @@ iframe
       vertical-align middle
     .group-statistic__link_border
       border-width 1px
+      cursor pointer
     .style-list-wrapper
       display: inline-block
       width 43%
@@ -813,6 +926,7 @@ iframe
       background: $medium-purple
 .group-concerts-list
   width 31.6%
+  text-align left
   background: rgba(0,0,0,.12)
   box-sizing border-box
   border-radius 5px
@@ -827,6 +941,22 @@ iframe
     display: block
     &:not(:first-child)
       border-top 1px solid rgba(255,255,255,.05)
+    &_wider
+      .group-concerts-list__group
+        font-size 18px
+        display: block
+      .group-concerts-list__place
+        font-size 12px
+        color $dark-white
+        margin-top 8px
+      .group-concerts-list__date
+        font-size 12px
+        color $dark-white
+        margin-top 4px
+      .group-concerts-list__like
+        color #6a6a6a
+        display: block
+        margin-top 5px
   &__link
     color #fff
     display block
@@ -992,6 +1122,8 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
      min-width 90px
     &_genre
      min-width 140px
+    &_date
+     min-width 140px
   &__item
     display: inline-block
     &:not(:last-child)
@@ -1053,7 +1185,7 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
     border-bottom-right-radius 21px
     width 100%
   &__item
-    border-top: 1px solid rgba(0,0,0,.2)
+    border-top: 1px solid #1e7fe2
   &__link
     color $white-hover
     display block
@@ -1075,6 +1207,8 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link
   border-bottom-left-radius 0
   border-bottom-right-radius 0
   color #fff
+.selectize-input.items.full.has-options.has-items.focus
+  cursor pointer
 .selectize-control.single .selectize-input.dropdown-active:after
   border-color  transparent transparent #fff transparent
 .selectize-control

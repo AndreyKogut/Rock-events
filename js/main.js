@@ -7,6 +7,7 @@ var userCab = $('#userBut');
 var filter = $('.filer');
 var fancyBox = $('.fancybox');
 var tabs = $('#tabs-block');
+var selectize1 = $('.selectize-dropdown-content');
 
 
 
@@ -22,10 +23,6 @@ var scrollInit = function(elem){
         });
     }
 };
-
-
-
-
 
 userCab.bind('click touchstart', function(){
 
@@ -103,9 +100,11 @@ sortBut.bind('click',function(){
     if(!filter.length > 0) {
         return;
     } else {
+
         filter.selectize({
             create: true
         });
+        scrollInit(filter);
     }
 })();
 

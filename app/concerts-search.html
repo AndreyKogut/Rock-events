@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rock bands</title>
+    <link rel="stylesheet" href="includes/reset.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="includes/selectize.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<div class="main-wrapper gradient-bg gradient-bg_light  ">
+    <header class="l-header l-header_grad-bg">
+        <div class="content">
+            <nav class="navigation cf">
+                <div class="logo f-l"><a href="" class="logo__link logo-icon"></a></div>
+                <div class="navigation__burger"></div>
+                <ul class="navigation__items">
+                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link">Concerts</a></li>
+                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link">Groups</a></li>
+                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link active">Genre</a></li>
+                    <li class="navigation__item navigation__link_upper"><a href="" class="navigation__link">Calendar</a></li>
+                </ul>
+                <div class="user-cabinet f-r" id="userBut">
+                    <div class="user-cabinet__head">
+                        <img src="img/user_img.jpg" alt="" class="user-cabinet__img">
+                        <span class="user-cabinet__name">Roma</span>
+                    </div>
+                    <ul class="user-cabinet__menu">
+                        <li class="user-cabinet__item"><a href="" class="user-cabinet__link profile-icon-t">Профіль</a></li>
+                        <li class="user-cabinet__item">
+                            <a href="" class="user-cabinet__link concert-icon-t">Найближчі концерти</a>
+                            <a href="" class="user-cabinet__link group-icon-t">Гурти</a>
+                            <a href="" class="user-cabinet__link genre-icon-t">Жанри</a></li>
+                        <li class="user-cabinet__item"><a href="" class="user-cabinet__link cabinet-icon-t">Кабінет менеджера</a></li>
+                        <li class="user-cabinet__item"><a href="" class="user-cabinet__link logout-icon-t">Вийти</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="l-filters">
+        <div class="content lp">
+            <ul class="l-filters__list">
+                <li class="l-filters__item"><label for="list1" class="l-filters__label">Country:</label>
+                    <select name="" id="list1" class="l-filters__select filer l-filters__select_country">
+                        <option value="1" class="l-filters__option">Ukraine</option>
+                        <option value="2" class="l-filters__option">Russia</option>
+                        <option value="3" class="l-filters__option">England</option>
+                        <option value="4" class="l-filters__option">Poland</option>
+                    </select>
+                </li>
+                <li class="l-filters__item"><label for="list2" class="l-filters__label">City:</label>
+                    <select name="" id="list2" class="l-filters__select l-filters__select_city filer">
+                        <option value="1" class="l-filters__option">Kharkov</option>
+                        <option value="2" class="l-filters__option">Ivano-Frankivsk</option>
+                        <option value="3" class="l-filters__option">Odessa</option>
+                        <option value="4" class="l-filters__option">Kiev</option>
+                    </select>
+                </li>
+                <li class="l-filters__item"><label for="list5" class="l-filters__label">Time:</label>
+                    <select name="" id="list5" class="l-filters__select l-filters__select_date filer">
+                        <option value="1" class="l-filters__option">Today</option>
+                        <option value="2" class="l-filters__option">This week</option>
+                        <option value="3" class="l-filters__option">This month</option>
+                        <option value="4" class="l-filters__option">This year</option>
+                    </select>
+                </li>
+                <li class="l-filters__item"><label for="list3" class="l-filters__label">Fans:</label>
+                    <select name="" id="list3" class="l-filters__select l-filters__select_fans filer">
+                        <option value="1" class="l-filters__option">Up</option>
+                        <option value="2" class="l-filters__option">Down</option>
+                    </select>
+                </li>
+                <li class="l-filters__item"><label for="list4" class="l-filters__label">Genre:</label>
+                    <select name="" id="list4" class="l-filters__select l-filters__select_genre filer">
+                        <option value="1" class="l-filters__option">Hard rock</option>
+                        <option value="2" class="l-filters__option">Alternative</option>
+                        <option value="3" class="l-filters__option">Folk</option>
+                        <option value="4" class="l-filters__option selected">All</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="l-events">
+        <div class="content cf">
+            <ul class="event-list event-list_normal-medium">
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                            <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                            <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                            <p class="concert-header__price ">$200-300</p>
+                            <p class="concert-header__followers like-icon-t">12323</p>
+                                </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+                <li class="event-list__item">
+                    <a href="" class="event-list__link event-list__link_concert">
+                        <img src="img/group-img-1.jpg" alt="" class="event-list__img">
+                        <section class="concert-header_preview">
+                            <h1 class="concert-header__h">Coldplay</h1>
+                            <div class="al-center">
+                                <p class="concert-header__country pin-icon-small-t ">Kyiv<span class="concert-header__place">Sport Palace</span></p>
+                                <time class="concert-header__date time-icon-small-t">12 May<span class="concert-header__time">, 19:00</span></time>
+                                <p class="concert-header__price ">$200-300</p>
+                                <p class="concert-header__followers like-icon-t">12323</p>
+                            </div>
+                        </section>
+                    </a>
+                </li>
+            </ul>
+            <aside class="group-concerts-list f-r">
+                <h4 class="group-concerts-list__header top-icon-t">5 popular concerts</h4>
+                <ul class="group-concerts-list__items">
+                    <li class="group-concerts-list__item group-concerts-list__item_wider">
+                        <a href="" class="group-concerts-list__link cf">
+                            <div class="f-l">
+                            <p class="group-concerts-list__group">Coldplay</p>
+                            <p class="group-concerts-list__place pin-icon-grey-t">
+                                Belorus, Minsk
+                                <span class="group-concerts-list__date time-icon-grey-t">
+                                    12 May, Friday 19:00
+                                </span>
+                            </p>
+                            </div>
+                            <p class="group-concerts-list__price f-r">$120-500<span class="group-concerts-list__like like-icon-grey-t">123</span></p>
+                        </a>
+                    </li>
+                    <li class="group-concerts-list__item group-concerts-list__item_wider">
+                        <a href="" class="group-concerts-list__link cf">
+                            <div class="f-l">
+                                <p class="group-concerts-list__group">Coldplay</p>
+                                <p class="group-concerts-list__place pin-icon-grey-t">
+                                    Belorus, Minsk
+                                <span class="group-concerts-list__date time-icon-grey-t">
+                                    12 May, Friday 19:00
+                                </span>
+                                </p>
+                            </div>
+                            <p class="group-concerts-list__price f-r">$120-500<span class="group-concerts-list__like like-icon-grey-t">123</span></p>
+                        </a>
+                    </li>
+                    <li class="group-concerts-list__item group-concerts-list__item_wider">
+                        <a href="" class="group-concerts-list__link cf">
+                            <div class="f-l">
+                                <p class="group-concerts-list__group">Coldplay</p>
+                                <p class="group-concerts-list__place pin-icon-grey-t">
+                                    Belorus, Minsk
+                                <span class="group-concerts-list__date time-icon-grey-t">
+                                    12 May, Friday 19:00
+                                </span>
+                                </p>
+                            </div>
+                            <p class="group-concerts-list__price f-r">$120-500<span class="group-concerts-list__like like-icon-grey-t">123</span></p>
+                        </a>
+                    </li>
+                    <li class="group-concerts-list__item group-concerts-list__item_wider">
+                        <a href="" class="group-concerts-list__link cf">
+                            <div class="f-l">
+                                <p class="group-concerts-list__group">Coldplay</p>
+                                <p class="group-concerts-list__place pin-icon-grey-t">
+                                    Belorus, Minsk
+                                <span class="group-concerts-list__date time-icon-grey-t">
+                                    12 May, Friday 19:00
+                                </span>
+                                </p>
+                            </div>
+                            <p class="group-concerts-list__price f-r">$120-500<span class="group-concerts-list__like like-icon-grey-t">123</span></p>
+                        </a>
+                    </li>
+                    <li class="group-concerts-list__item group-concerts-list__item_wider">
+                        <a href="" class="group-concerts-list__link cf">
+                            <div class="f-l">
+                                <p class="group-concerts-list__group">Coldplay</p>
+                                <p class="group-concerts-list__place pin-icon-grey-t">
+                                    Belorus, Minsk
+                                <span class="group-concerts-list__date time-icon-grey-t">
+                                    12 May, Friday 19:00
+                                </span>
+                                </p>
+                            </div>
+                            <p class="group-concerts-list__price f-r">$120-500<span class="group-concerts-list__like like-icon-grey-t">123</span></p>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+</div>
+<div class="l-event-dated gradient-bg gradient-bg_dark cf">
+    <div class="content">
+        <h2 class="l-event-dated__h">Latest concerts</h2>
+        <ul class="latest-concert">
+            <li class="latest-concert__item"><a href="" class="latest-concert__link">
+                <time class="latest-concert__time">12 sdfsdfs</time>
+                <h3 class="latest-concert__group">Very long band name</h3>
+            </a></li>
+            <li class="latest-concert__item"><a href="" class="latest-concert__link">
+                <time class="latest-concert__time">12 sdfsdfs</time>
+                <h3 class="latest-concert__group">Very long band name</h3>
+            </a></li>
+            <li class="latest-concert__item"><a href="" class="latest-concert__link">
+                <time class="latest-concert__time">12 sdfsdfs</time>
+                <h3 class="latest-concert__group">Very long band name</h3>
+            </a></li>
+            <li class="latest-concert__item"><a href="" class="latest-concert__link">
+                <time class="latest-concert__time">12 sdfsdfs</time>
+                <h3 class="latest-concert__group">Very long band name</h3>
+            </a></li>
+            <li class="latest-concert__item"><a href="" class="latest-concert__link">
+                <time class="latest-concert__time">12 sdfsdfs</time>
+                <h3 class="latest-concert__group">Very long band name</h3>
+            </a></li>
+            <li class="latest-concert__item"><a href="" class="latest-concert__link">
+                <time class="latest-concert__time">12 sdfsdfs</time>
+                <h3 class="latest-concert__group">Very long band name</h3>
+            </a></li>
+        </ul>
+
+    </div>
+</div>
+
+<footer class="l-footer">
+    <div class="content cf">
+        <ul class="contacts f-r">
+            <li class="contacts__item"><a href="" class="contacts__link "><i class="contacts__icon fb-icon"></i></a></li>
+            <li class="contacts__item"><a href="" class="contacts__link "><i class="contacts__icon be-icon"></i></a></li>
+            <li class="contacts__item"><a href="" class="contacts__link "><i class="contacts__icon gh-icon"></i></a></li>
+        </ul>
+        <nav class="navigation navigation_dark f-l">
+            <ul class="navigation__items">
+                <li class="navigation__item"><a href="" class="navigation__link active">Home</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Concerts</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Groups</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Genre</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Calendar</a></li>
+            </ul>
+            <p class="copyright">&copy; RockEvents 2016</p>
+        </nav>
+    </div>
+
+</footer>
+<div id="scrollTop"></div>
+<script src="includes/jquery.js"></script>
+<script src="includes/microplugin.js"></script>
+<script src="includes/sifter.js"></script>
+<script src="includes/jquery.mCustomScrollbar.js"></script>
+<script src="includes/jquery.mousewheel.js"></script>
+<script src="includes/selectize.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
