@@ -29,9 +29,15 @@
   .l-events
     padding-bottom 80px
   .latest-concert
-    &__item:first-child,
-    &__item:nth-child(2)
-        display none
+    overflow-x scroll
+    display block
+    white-space nowrap
+    &__item
+      display inline-block
+      width auto
+      max-width 220px
+      white-space normal
+
 @media (max-width: 800px)
   .l-header__h
     margin-top: 80px
@@ -50,9 +56,45 @@
   .navigation__link
     padding: 12px 18px;
     font-size 12px
-
-
-
+@media (max-width: 700px)
+  .l-header__h
+    font-size 30px
+  .l-header__text
+    font-size 18px
+  .user-cabinet
+    float: right
+  .navigation
+    &__items
+      display none
+    &__item
+      display: block
+    &__burger
+      display: inline-block
+      float left
+      margin-top: 10px;
+  .button_big
+    padding: 15px 26px;
+    font-size: 15px;
+  .icon_show-t:before
+    width: 22px;
+    height: 20px;
+    background-size contain
+  .event-list_normal
+    text-align center
+  .event-list_normal .event-list__item
+    width 100%
+    max-width 385px
+  .contacts
+    margin-top 0
+  .l-sort__header
+    display: block
+  .l-sort__allTime
+    display: none
+  #everything,
+  #everywhere,
+  #allTime
+    width 100%
+    margin-bottom 15px
 
 
 

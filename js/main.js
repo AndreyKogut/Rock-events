@@ -68,7 +68,7 @@ $(document).bind('mouseup touchend resize',function (e){
             everythingDrop.removeClass('active');
         }
     }
-    if($(window).width()<600) {
+    if($(window).width()<700) {
         if (allTimeDrop.is(e.target)) {
 
             allTimeDrop.toggleClass('active');
@@ -120,7 +120,7 @@ $(window).bind('load resize', function(){
         everythingDrop.find('.l-sort__list').mCustomScrollbar('destroy');
     }
 
-    if($(window).width()<650) {
+    if($(window).width()<700) {
         scrollInit(allTimeDrop.find('.l-sort__list'));
     } else {
         allTimeDrop.find('.l-sort__list').mCustomScrollbar('destroy');

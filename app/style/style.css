@@ -423,6 +423,15 @@ body {
   display: inline-block;
   position: relative;
 }
+.navigation__burger {
+  width: 18px;
+  height: 18px;
+  display: none;
+  margin-left: 10px;
+  vertical-align: middle;
+  background: url("../img/burger.png");
+  cursor: pointer;
+}
 .navigation__link {
   color: #fff;
   display: block;
@@ -1794,9 +1803,16 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link {
   .l-events {
     padding-bottom: 80px;
   }
-  .latest-concert__item:first-child,
-  .latest-concert__item:nth-child(2) {
-    display: none;
+  .latest-concert {
+    overflow-x: scroll;
+    display: block;
+    white-space: nowrap;
+  }
+  .latest-concert__item {
+    display: inline-block;
+    width: auto;
+    max-width: 220px;
+    white-space: normal;
   }
 }
 @media (max-width: 800px) {
@@ -1822,5 +1838,58 @@ li.about-body__item.r-tabs-tab.r-tabs-state-active .about-body__link {
   .navigation__link {
     padding: 12px 18px;
     font-size: 12px;
+  }
+}
+@media (max-width: 700px) {
+  .l-header__h {
+    font-size: 30px;
+  }
+  .l-header__text {
+    font-size: 18px;
+  }
+  .user-cabinet {
+    float: right;
+  }
+  .navigation__items {
+    display: none;
+  }
+  .navigation__item {
+    display: block;
+  }
+  .navigation__burger {
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+  }
+  .button_big {
+    padding: 15px 26px;
+    font-size: 15px;
+  }
+  .icon_show-t:before {
+    width: 22px;
+    height: 20px;
+    background-size: contain;
+  }
+  .event-list_normal {
+    text-align: center;
+  }
+  .event-list_normal .event-list__item {
+    width: 100%;
+    max-width: 385px;
+  }
+  .contacts {
+    margin-top: 0;
+  }
+  .l-sort__header {
+    display: block;
+  }
+  .l-sort__allTime {
+    display: none;
+  }
+  #everything,
+  #everywhere,
+  #allTime {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }

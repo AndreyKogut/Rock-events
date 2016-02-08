@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
-//   minifyCss = require('gulp-minify-css'),
-//   uglify = require('gulp-minify'),
+    minifyCss = require('gulp-minify-css'),
+    uglify = require('gulp-minify'),
     stylus = require('gulp-stylus'),
     mainBowerFiles = require('main-bower-files'),
     livereload = require('gulp-livereload'),
@@ -27,12 +27,27 @@ gulp.task('bowerComponents',function(){
         .pipe(gulp.dest('app/includes'))
 });
 
+gulp.task('bowerJsUgl', function(){
+    return gulp.src('app/includes/*.js')
+        .pipe(uglify({
+            mangle: false
+        }))
+        .pipe(gulp.dest('app/includes/min'));
+});
+
+gulp.task('bowerCssMin', function(){
+    return gulp.src('app/includes/*.css')
+        .pipe(minifyCss({
+            mangle: false
+        }))
+        .pipe(gulp.dest('app/includes/min'));
+});
+
 gulp.task('watch',function(){
 
     gulp.watch('js/*.js',['jsTask']);
     gulp.watch('style/*.styl',['cssTask']);
-    gulp.watch('bower_components',['bowerComponents']);
 });
 
 
-gulp.task('default', ['jsTask','cssTask','bowerComponents','watch']);
+gulp.task('default', ['jsTask','cssTask','bowerComponents','watch','bowerJsUgl','bowerCssMin']);
