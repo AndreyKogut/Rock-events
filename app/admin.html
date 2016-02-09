@@ -5,12 +5,11 @@
     <title>Rock bands</title>
     <link rel="stylesheet" href="includes/reset.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="includes/responsive-tabs.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,500italic,400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<div class="main-wrapper gradient-bg gradient-bg_light  ">
+<div class="main-wrapper gradient-bg gradient-bg_light cf  ">
     <header class="l-header l-header_grad-bg">
         <div class="content">
             <nav class="navigation cf">
@@ -40,26 +39,142 @@
             </nav>
         </div>
     </header>
-    <div class="l-admin content">
-        <div id="tabs-block-admin">
-            <ul  class="l-admin__list">
-                <li class="l-admin__item"><a href="#tab-1" class="l-admin__link active"> About band </a></li>
-                <li class="l-admin__item"><a href="#tab-2" class="l-admin__link"> Songs </a></li>
-                <li class="l-admin__item"><a href="#tab-3" class="l-admin__link"> Similar artists </a></li>
-                <li class="l-admin__item"><a href="#tab-4" class="l-admin__link"> Comments </a></li>
+    <div class="l-admin cf content">
+        <div id="tabs-block-admin" class="cf">
+            <ul  class="l-admin__list f-l">
+                <li class="l-admin__item"><a href="#tab-1" class="l-admin__link profile-icon-big-t"> Profile </a></li>
+                <li class="l-admin__item"><a href="#tab-2" class="l-admin__link concert-icon-big-t">Next concerts </a></li>
+                <li class="l-admin__item"><a href="#tab-3" class="l-admin__link group-icon-big-t"> Groups </a></li>
+                <li class="l-admin__item"><a href="#tab-4" class="l-admin__link genre-icon-big-t"> Genre </a></li>
+                <li class="l-admin__item"><a href="#tab-5" class="l-admin__link cabinet-icon-big-t"> Manager </a></li>
+                <li class="l-admin__item"><a href="#tab-6" class="l-admin__link l-admin__link_log-out logout-icon-big-t"> Log out </a></li>
             </ul>
 
-        <div id="tab-1">
-            1
+        <div id="tab-1" class="f-r">
+            <section class="l-profile">
+                <div class="img-wrapper"><img src="img/user-big.jpg" alt="" class="l-profile__img">
+                    <a href="" class="l-profile__foto foto-icon"></a>
+                </div>
+                <ul class="l-profile__links">
+                    <li class="l-profile__link"><a href="" class="l-profile__link icon-f-big"></a></li>
+                    <li class="l-profile__link"><a href="" class="l-profile__link icon-b-big"></a></li>
+                    <li class="l-profile__link"><a href="" class="l-profile__link icon-g-big"></a></li>
+                </ul>
+                <form action="#" method="post" class="profile-form">
+                    <ul class="profile-form__list">
+                        <li class="profile-form__item">
+                            <label for="userName" class="profile-form__label">Name</label>
+                            <input id="userName" placeholder="Enter your name..." type="text" class="profile-form__input">
+                            <label for="userSurname" class="profile-form__label">Surname</label>
+                            <input id="userSurname" placeholder="Enter your surname..." type="text" class="profile-form__input">
+                        </li>
+                        <li class="profile-form__item">
+                            <label for="userEmail" class="profile-form__label">E-mail</label>
+                            <input id="userEmail" placeholder="Enter your e-mail..." type="email" class="profile-form__input">
+                        </li>
+                        <li class="profile-form__item">
+                            <label for="userPass" class="profile-form__label">Password</label>
+                            <input id="userPass" type="password" class="profile-form__input">
+                            <label for="userPassConf" class="profile-form__label">Confirm password</label>
+                            <input id="userPassConf" type="password" class="profile-form__input">
+                        </li>
+                    </ul>
+                    <input type="submit" class="profile-form__submit" value="Confirm">
+                </form>
+                <button class="profile-form__button"><a href="" class="profile-form__link">Delete account</a></button>
+            </section>
         </div>
-        <div id="tab-2">
-            2
+        <div id="tab-2" class="f-r">
+            <table class="tabs-list">
+                <thead class="tabs-list__header">
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">№</td>
+                    <td class="tabs-list__td">Name</td>
+                    <td class="tabs-list__td">Album</td>
+                    <td class="tabs-list__td">D.</td>
+                    <td class="tabs-list__td"></td>
+                </tr>
+                </thead>
+                <tbody class="tabs-list__body">
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+                <tr class="tabs-list__row">
+                    <td class="tabs-list__td">1</td>
+                    <td class="tabs-list__td"><a href="" class="tabs-list__link">dfsdfsdfsdfsd</a></td>
+                    <td class="tabs-list__td">dfsdfsdf sdf sdf</td>
+                    <td class="tabs-list__td_dark">3:30</td>
+                    <td class="tabs-list__td"><span class="delete-icon"></span></td>
+                </tr>
+
+                </tbody>
+
+            </table>
         </div>
-        <div id="tab-3">
+        <div id="tab-3" class="f-r">
            3
         </div>
-        <div id="tab-4">
+        <div id="tab-4" class="f-r">
             4
+        </div>
+        <div id="tab-5" class="f-r">
+            5
+        </div>
+        <div id="tab-6" class="f-r">
+            6
         </div>
     </div>
     </div>
