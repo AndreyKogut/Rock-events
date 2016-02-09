@@ -7,7 +7,7 @@ var userCab = $('#userBut');
 var filter = $('.filer');
 var fancyBox = $('.fancybox');
 var tabs = $('#tabs-block');
-var selectize1 = $('.selectize-dropdown-content');
+var tabsAdmin = $('#tabs-block-admin');
 
 
 
@@ -97,38 +97,39 @@ sortBut.bind('click',function(){
 });
 
 (function filInit(){
-    if(!filter.length > 0) {
+    if(!(filter.length > 0)) {
         return;
     } else {
 
         filter.selectize({
             create: true
         });
-        scrollInit(filter);
     }
 })();
 
 
 $(window).bind('load resize', function(){
 
-   scrollInit(everywhereDrop.find('.l-sort__list'));
+   if(everywhereDrop.length>0) { scrollInit(everywhereDrop.find('.l-sort__list')); }
 
-    if($(window).width()<960) {
-        scrollInit(everythingDrop.find('.l-sort__list'));
-    } else {
-        everythingDrop.find('.l-sort__list').mCustomScrollbar('destroy');
+    if(everythingDrop.length>0) {
+        if ($(window).width() < 960) {
+            scrollInit(everythingDrop.find('.l-sort__list'));
+        } else {
+            everythingDrop.find('.l-sort__list').mCustomScrollbar('destroy');
+        }
     }
-
-    if($(window).width()<700) {
-        scrollInit(allTimeDrop.find('.l-sort__list'));
-    } else {
-        allTimeDrop.find('.l-sort__list').mCustomScrollbar('destroy');
+    if(allTimeDrop.length>0) {
+        if ($(window).width() < 700) {
+            scrollInit(allTimeDrop.find('.l-sort__list'));
+        } else {
+            allTimeDrop.find('.l-sort__list').mCustomScrollbar('destroy');
+        }
     }
-
 });
 
 (function fancyInit(){
-    if(!fancyBox.length > 0) {
+    if(!(fancyBox.length > 0)) {
        return;
     } else {
         fancyBox.fancybox();
@@ -136,7 +137,7 @@ $(window).bind('load resize', function(){
 })();
 
 (function tabInit(){
-    if(!tabs.length > 0) {
+    if(!(tabs.length > 0)) {
         return;
     } else {
         tabs.responsiveTabs({
@@ -149,5 +150,17 @@ $(window).bind('load resize', function(){
     }
 })();
 
-
+(function adminTabs(){
+    if(!(tabsAdmin.length > 0)) {
+        return;
+    } else {
+        tabsAdmin.responsiveTabs({
+            scrollToAccordion: true,
+            rotate: false,
+            animation: 'slide',
+            startCollapsed: 'accordion',
+            enabled: 0
+        })
+    }
+})();
 

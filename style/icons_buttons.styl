@@ -153,14 +153,17 @@
   display block
   margin auto
   cursor pointer
-.like-icon-t:before
-  content ''
-  display inline-block
-  width: 16px
-  height: 14px
-  background: url(../img/band-sprite-icons.png) -8px center no-repeat
-  vertical-align middle
-  margin-right 10px
+.like-icon-t
+  &_marg
+    &:before
+      margin-right 15px
+  &:before
+    content ''
+    display inline-block
+    width: 15px
+    height: 14px
+    background: url(../img/band-sprite-icons.png) -8px center no-repeat
+    vertical-align middle
 .lfm-icon:before
   content ''
   display inline-block
