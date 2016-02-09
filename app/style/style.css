@@ -20,6 +20,9 @@ a {
 .f-r {
   float: right;
 }
+.center {
+  text-align: center;
+}
 .al-left {
   text-align: left;
   display: inline-block;
