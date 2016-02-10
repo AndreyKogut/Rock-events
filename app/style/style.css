@@ -575,7 +575,7 @@ body {
   width: 9px;
   height: 9px;
   background: url("../img/delete-icon.png") center center no-repeat;
-  display: block;
+  display: inline-block;
   cursor: pointer;
   background-size: contain;
 }
@@ -2171,20 +2171,33 @@ iframe {
 }
 #tabs-block-admin {
   background: rgba(0,0,0,0.2);
+  display: table;
+  width: 100%;
 }
 .l-admin__list {
-  width: 20%;
+  display: table-cell;
   font-size: 15px;
-  display: inline-block;
+  vertical-align: top;
+  width: 170px;
 }
 .l-admin__item {
   display: block;
   width: 100%;
-  height: 100px;
+  height: 101px;
+}
+.l-admin__icon {
+  width: 35px;
+}
+.l-admin__icon,
+.l-admin__head {
+  display: table-cell;
+  vertical-align: middle;
 }
 .l-admin__link {
-  display: block;
-  padding: 36px 22px;
+  display: table;
+  width: 100%;
+  padding: 0 22px;
+  height: 100%;
   overflow: hidden;
   vertical-align: middle;
   -webkit-box-sizing: border-box;
@@ -2205,13 +2218,40 @@ iframe {
 .l-admin #tab-4,
 .l-admin #tab-5,
 .l-admin #tab-6 {
-  width: 80%;
+  width: 100%;
+  max-height: 606px;
   font-size: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   vertical-align: top;
   display: none;
   padding: 25px 30px;
+}
+.l-admin #tab-1 .r-tabs-panel.r-tabs-state-active,
+.l-admin #tab-2 .r-tabs-panel.r-tabs-state-active,
+.l-admin #tab-3 .r-tabs-panel.r-tabs-state-active,
+.l-admin #tab-4 .r-tabs-panel.r-tabs-state-active,
+.l-admin #tab-5 .r-tabs-panel.r-tabs-state-active,
+.l-admin #tab-6 .r-tabs-panel.r-tabs-state-active {
+  display: table-cell;
+}
+.l-admin #tab-1 .mCSB_scrollTools .mCSB_draggerContainer,
+.l-admin #tab-2 .mCSB_scrollTools .mCSB_draggerContainer,
+.l-admin #tab-3 .mCSB_scrollTools .mCSB_draggerContainer,
+.l-admin #tab-4 .mCSB_scrollTools .mCSB_draggerContainer,
+.l-admin #tab-5 .mCSB_scrollTools .mCSB_draggerContainer,
+.l-admin #tab-6 .mCSB_scrollTools .mCSB_draggerContainer {
+  height: 100%;
+}
+.l-admin #tab-1 .mCSB_outside + .mCSB_scrollTools,
+.l-admin #tab-2 .mCSB_outside + .mCSB_scrollTools,
+.l-admin #tab-3 .mCSB_outside + .mCSB_scrollTools,
+.l-admin #tab-4 .mCSB_outside + .mCSB_scrollTools,
+.l-admin #tab-5 .mCSB_outside + .mCSB_scrollTools,
+.l-admin #tab-6 .mCSB_outside + .mCSB_scrollTools {
+  right: 10px;
+  top: 25px;
+  bottom: 25px;
 }
 .img-wrapper {
   display: inline-block;
@@ -2227,6 +2267,9 @@ iframe {
 .r-tabs-accordion-title.r-tabs-state-active {
   display: none;
 }
+.r-tabs-accordion-title {
+  display: none;
+}
 .l-profile__img {
   width: 135px;
   display: block;
@@ -2240,24 +2283,28 @@ iframe {
   margin-top: 75%;
   background-color: rgba(0,0,0,0.8);
 }
-.l-profile__links {
+.user-links {
   display: block;
   margin-top: 10px;
   margin-bottom: 40px;
 }
-.l-profile__link {
+.user-links__link {
   width: 35px;
   height: 32px;
   display: inline-block;
+  opacity: 0.2;
 }
-.l-profile__link:not(:last-child) {
+.user-links__link:not(:last-child) {
   margin-right: 20px;
+}
+.user-links__link:hover {
+  opacity: 1;
 }
 .profile-form__list {
   font-size: 0;
   margin: 0 -15px;
   text-align: left;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .profile-form__item {
   display: inline-block;
@@ -2304,8 +2351,8 @@ iframe {
   text-overflow: ellipsis;
 }
 .profile-form__input:focus {
-  -webkit-box-shadow: 0 0 16px 0 rgba(54,173,234,0.36);
-          box-shadow: 0 0 16px 0 rgba(54,173,234,0.36);
+  -webkit-box-shadow: 0px 0px 14.56px 1.44px rgba(54,173,234,0.36);
+          box-shadow: 0px 0px 14.56px 1.44px rgba(54,173,234,0.36);
   color: #fff;
 }
 .profile-form__submit {
@@ -2348,6 +2395,67 @@ iframe {
 :-ms-input-placeholder {
   font-style: italic;
   color: #413946;
+}
+.sign-tabs-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999999;
+  text-align: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.sign-tabs-wrapper .sign-tabs {
+  display: table-cell;
+  vertical-align: middle;
+}
+.sign-tabs-wrapper #tabs-block {
+  padding-right: 0;
+  width: 370px;
+  background: #312932;
+  -webkit-border-radius: 7px;
+          border-radius: 7px;
+  overflow: hidden;
+  position: relative;
+}
+.sign-tabs-wrapper .close-but {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #1b151c;
+  text-align: right;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.sign-tabs-wrapper .delete-icon {
+  opacity: 0.2;
+}
+.sign-tabs-wrapper .delete-icon:hover {
+  opacity: 1;
+}
+.sign-tabs-wrapper .about-body__link {
+  padding: 16px 0;
+}
+.sign-tabs-wrapper .about-body__list {
+  background: #271d27;
+}
+.sign-tabs-wrapper .profile-form__label {
+  text-align: left;
+}
+.sign-tabs-wrapper .sign-tabs__label {
+  color: #9996c4;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.sign-tabs-wrapper .user-links {
+  margin-bottom: 20px;
 }
 @media (max-width: 960px) {
   .l-header__h {

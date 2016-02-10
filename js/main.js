@@ -4,12 +4,23 @@ var allTimeDrop = $('#allTime');
 var scrollBut = $('#scrollTop');
 var sortBut = $('#arrowSort');
 var userCab = $('#userBut');
+var scroll  = $('.scroll');
 var filter = $('.filer');
 var fancyBox = $('.fancybox');
 var tabs = $('#tabs-block');
 var tabsAdmin = $('#tabs-block-admin');
+var sign = $('#sign');
+var butClose = $('#closeBut');
+var outerForm = $('.sign-tabs');
 
 
+function close(elem){
+    if(butClose.is(elem) || outerForm.is(elem)) {
+        sign.hide();
+    } else {
+
+    }
+};
 
 var scrollInit = function(elem){
     if(!elem.length > 0) {
@@ -38,7 +49,11 @@ userCab.bind('click', function(){
 
 });
 
+$(document).bind('mousedown', function(e){
+    close(e.target);
+});
 $(document).bind('mouseup resize',function (e){
+
 
     if (everywhereDrop.is(e.target)) {
 
@@ -128,6 +143,21 @@ $(window).bind('load resize', function(){
     }
 });
 
+(function formScrollInit(){
+
+    if(!(scroll.length > 0)) {
+        return;
+    } else {
+        scroll.mCustomScrollbar({
+            scrollbarPosition: 'outside',
+            autoHideScrollbar : true,
+            live: 'true',
+            alwaysShowScrollbar: 0,
+            autoExpandScrollbar: true
+        });
+    }
+})();
+
 (function fancyInit(){
     if(!(fancyBox.length > 0)) {
        return;
@@ -158,9 +188,9 @@ $(window).bind('load resize', function(){
             scrollToAccordion: true,
             rotate: false,
             animation: 'slide',
-            startCollapsed: 'accordion',
             enabled: 0
         })
     }
 })();
+
 

@@ -1286,19 +1286,30 @@ iframe
   width 65%
 #tabs-block-admin
   background: rgba(0,0,0,.2)
-
+  display table
+  width 100%
 .l-admin
   &__list
-    width 20%
+    display table-cell
     font-size 15px
-    display: inline-block
+    vertical-align: top;
+    width 170px
+    //display: inline-block
   &__item
     display: block
     width 100%
-    height 100px
+    height 101px
+  &__icon
+    width 35px
+  &__icon,
+  &__head
+    display table-cell
+    vertical-align middle
   &__link
-    display: block
-    padding 36px 22px
+    display: table
+    width 100%
+    padding: 0 22px;
+    height 100%
     overflow hidden
     vertical-align middle
     box-sizing border-box
@@ -1315,12 +1326,21 @@ iframe
   #tab-4,
   #tab-5,
   #tab-6
-    width 80%
+    width 100%
+    max-height 606px
     font-size 15px
     box-sizing border-box;
     vertical-align top
     display none
     padding 25px 30px
+    .r-tabs-panel.r-tabs-state-active
+      display table-cell
+    .mCSB_scrollTools .mCSB_draggerContainer
+      height  100%
+    .mCSB_outside + .mCSB_scrollTools
+      right 10px
+      top 25px
+      bottom 25px
 .img-wrapper
   display: inline-block
   border-radius 50%
@@ -1335,6 +1355,8 @@ iframe
 
 .r-tabs-accordion-title.r-tabs-state-active
   display none
+.r-tabs-accordion-title
+  display: none
 // end
 
 
@@ -1350,16 +1372,19 @@ iframe
     left: 0
     margin-top: 75%;
     background-color: rgba(0,0,0,.8)
-  &__links
-    display: block
-    margin-top 10px
-    margin-bottom 40px
+.user-links
+  display: block
+  margin-top 10px
+  margin-bottom 40px
   &__link
     width 35px
     height 32px
     display: inline-block
+    opacity 0.2
     &:not(:last-child)
       margin-right 20px
+    &:hover
+      opacity 1
 
 
 .profile-form
@@ -1367,7 +1392,7 @@ iframe
     font-size 0
     margin 0 -15px
     text-align left
-    margin-bottom 35px
+    margin-bottom 30px
   &__item
     display inline-block
     width 33.33%
@@ -1403,7 +1428,7 @@ iframe
     font-size 16px
     text-overflow: ellipsis;
     &:focus
-      box-shadow 0 0 16px 0 rgba(54,173,234,.36)
+      box-shadow: 0px 0px 14.56px 1.44px rgba(54, 173, 234, 0.36)
       color #fff
   &__submit
     font-size 18px
@@ -1429,4 +1454,55 @@ iframe
 ::-moz-placeholder          {font-style: italic; color: #413946}
 :-moz-placeholder           {font-style: italic; color: #413946}
 :-ms-input-placeholder      {font-style: italic; color: #413946}
+
+
+.sign-tabs-wrapper
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,.9);
+  z-index: 9999999;
+  text-align: center;
+  display: table;
+  width: 100%;
+  height: 100%;
+  .sign-tabs
+    display table-cell
+    vertical-align middle
+  #tabs-block
+    padding-right 0
+    width 370px
+    background: $form-color
+    border-radius 7px
+    overflow hidden
+    position relative
+  .close-but
+    position absolute
+    top 0
+    left 0
+    width 100%
+    background: $form-close-color;
+    text-align right
+    padding-right 10px
+    box-sizing border-box
+  .delete-icon
+    opacity 0.2
+    &:hover
+      opacity 1
+  .about-body__link
+    padding 16px 0
+  .about-body__list
+    background: $form-header-color
+  .profile-form__label
+    text-align left
+  .sign-tabs__label
+    color $medium-purple
+    font-size 14px
+    text-transform uppercase
+    margin-top 10px
+  .user-links
+    margin-bottom 20px
+
 @require "media_960.styl"
