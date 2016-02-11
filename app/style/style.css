@@ -2022,6 +2022,9 @@ iframe {
   position: relative;
 /* custom select */
 }
+.user-cabinet.login .user-cabinet__head:after {
+  display: inline-block;
+}
 .user-cabinet__img {
   vertical-align: middle;
   -webkit-border-radius: 50%;
@@ -2042,9 +2045,6 @@ iframe {
   padding-right: 35px;
   -webkit-border-radius: 21px;
           border-radius: 21px;
-}
-.user-cabinet__head.login .user-cabinet__head:after {
-  display: inline-block;
 }
 .user-cabinet__head.active {
   -webkit-border-bottom-left-radius: 0;

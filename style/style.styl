@@ -1170,6 +1170,9 @@ iframe
   text-align left
   min-width 220px
   position relative
+  &.login
+    .user-cabinet__head:after
+      display inline-block
   &__img
     vertical-align middle
     border-radius 50%
@@ -1186,9 +1189,6 @@ iframe
     background: $blue
     padding-right 35px
     border-radius 21px
-    &.login
-      .user-cabinet__head:after
-        display inline-block
     &.active
       border-bottom-left-radius 0
       border-bottom-right-radius 0
