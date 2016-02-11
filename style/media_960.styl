@@ -14,10 +14,14 @@
   #everywhere
     width 49%
     float right
+    .l-sort__list
+     overflow-y: scroll;
   #everything
     width 49%
     .l-sort__header
       display block
+    .l-sort__list
+      overflow-y: scroll;
   .l-sort__everything
     display none
   #allTime
@@ -86,10 +90,10 @@
     font-size 25px
   .about-header_prev .about-header__link
     padding 5px 10px
-  .event-list_normal-medium
-    margin-right -30px
-  .event-list_normal-medium
+  .but-wrapper
     width 80%
+    margin 0 auto
+    float none
   .event-list__link
     display: block
   .event-list_normal-medium .concert-header_preview
@@ -146,6 +150,14 @@
   .l-concert
     padding-top 20px
     padding-bottom 40px
+  .event-list_normal-medium
+    margin 0 -15px
+    .event-list__item
+      padding 0 15px
+  .concert-header_preview,
+  .event-list_normal-medium .event-list__link:after
+    left 15px
+    right 15px
 @media (max-width: 800px)
   .l-header__h
     margin-top: 80px
@@ -166,11 +178,13 @@
     font-size 12px
   .content-bg-white_margin-top
     padding-bottom 40px
-  .event-list_normal-medium
+  .but-wrapper
     width 90%
   #tabs-block .r-tabs-accordion-title.r-tabs-state-active
     display block
 @media (max-width: 700px)
+  #allTime .l-sort__list
+    overflow-y: scroll;
   .l-header__h
     font-size 30px
   .l-header__text
@@ -218,6 +232,7 @@
     text-align left
   .group-concerts-list__items
     max-height 400px
+    overflow-y scroll
   .about-header_head .about-header__link
     font-size 12px
   .about-header_head .about-header__header
@@ -233,8 +248,10 @@
     width 37%
   .about-header_prev .group-statistic
     width 15%
-  .event-list_normal-medium
+  .but-wrapper
     width 100%
+    text-align center
+  .event-list_normal-medium
     text-align center
   .event-list_normal-medium .event-list__item
     width 100%
@@ -263,6 +280,16 @@
     padding-left 0;
   .about-header_prev .about-header__header
     font-size 20px
+  .l-filters__item
+    width 100%
+  .l-filters__item:not(:last-child)
+    margin-right 0
+  .l-filters__select
+    width 100%
+  .l-filters__label,
+  .selectize-input.items.full.has-options.has-items,
+  .selectize-dropdown [data-selectable]
+    font-size 16px
 @media (max-width: 400px)
   .l-header__h
     margin-top: 80px

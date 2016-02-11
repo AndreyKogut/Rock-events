@@ -169,6 +169,9 @@ body {
   display: inline-block;
   color: #fff;
 }
+.button:hover {
+  background: #2e96ff;
+}
 .button_list-item {
   padding: 14px 43px;
   text-transform: capitalize;
@@ -194,16 +197,15 @@ body {
   font-size: 18px;
   text-transform: uppercase;
 }
-.button_big:hover {
-  background: #2e96ff;
-}
 .button_small {
   padding: 18px 40px;
   font-size: 16px;
   font-weight: 500;
 }
-.button_small:hover {
-  background: #2e96ff;
+.button_medium {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 8px 25px;
 }
 .button__icon {
   display: block;
@@ -579,6 +581,15 @@ body {
   cursor: pointer;
   background-size: contain;
 }
+.doors-icon-t:before {
+  content: '';
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background: url("../img/login-icon.png") center center no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
 .navigation__items {
   display: inline-block;
 }
@@ -949,8 +960,8 @@ body {
   text-transform: uppercase;
 }
 .event-list_normal-medium {
-  margin-bottom: 55px;
-  width: 68%;
+  margin-bottom: 15px;
+  width: 100%;
   display: inline-block;
 }
 .event-list_normal-medium .event-list__item {
@@ -2022,9 +2033,6 @@ iframe {
   position: relative;
 /* custom select */
 }
-.user-cabinet.login .user-cabinet__head:after {
-  display: inline-block;
-}
 .user-cabinet__img {
   vertical-align: middle;
   -webkit-border-radius: 50%;
@@ -2061,7 +2069,7 @@ iframe {
   right: 18px;
   content: '';
   background: url("../img/list_arrow.png") bottom center;
-  display: none;
+  display: inline-block;
   width: 9px;
   height: 6px;
   margin-top: -3px;
@@ -2456,6 +2464,13 @@ iframe {
 .sign-tabs-wrapper .user-links {
   margin-bottom: 20px;
 }
+.but-wrapper {
+  width: 68%;
+}
+.but-wrapper .button {
+  display: inline-block;
+  margin-bottom: 25px;
+}
 @media (max-width: 960px) {
   .l-header__h {
     margin-top: 80px;
@@ -2479,11 +2494,17 @@ iframe {
     width: 49%;
     float: right;
   }
+  #everywhere .l-sort__list {
+    overflow-y: scroll;
+  }
   #everything {
     width: 49%;
   }
   #everything .l-sort__header {
     display: block;
+  }
+  #everything .l-sort__list {
+    overflow-y: scroll;
   }
   .l-sort__everything {
     display: none;
@@ -2578,11 +2599,10 @@ iframe {
   .about-header_prev .about-header__link {
     padding: 5px 10px;
   }
-  .event-list_normal-medium {
-    margin-right: -30px;
-  }
-  .event-list_normal-medium {
+  .but-wrapper {
     width: 80%;
+    margin: 0 auto;
+    float: none;
   }
   .event-list__link {
     display: block;
@@ -2659,6 +2679,17 @@ iframe {
     padding-top: 20px;
     padding-bottom: 40px;
   }
+  .event-list_normal-medium {
+    margin: 0 -15px;
+  }
+  .event-list_normal-medium .event-list__item {
+    padding: 0 15px;
+  }
+  .concert-header_preview,
+  .event-list_normal-medium .event-list__link:after {
+    left: 15px;
+    right: 15px;
+  }
 }
 @media (max-width: 800px) {
   .l-header__h {
@@ -2687,7 +2718,7 @@ iframe {
   .content-bg-white_margin-top {
     padding-bottom: 40px;
   }
-  .event-list_normal-medium {
+  .but-wrapper {
     width: 90%;
   }
   #tabs-block .r-tabs-accordion-title.r-tabs-state-active {
@@ -2695,6 +2726,9 @@ iframe {
   }
 }
 @media (max-width: 700px) {
+  #allTime .l-sort__list {
+    overflow-y: scroll;
+  }
   .l-header__h {
     font-size: 30px;
   }
@@ -2757,6 +2791,7 @@ iframe {
   }
   .group-concerts-list__items {
     max-height: 400px;
+    overflow-y: scroll;
   }
   .about-header_head .about-header__link {
     font-size: 12px;
@@ -2780,8 +2815,11 @@ iframe {
   .about-header_prev .group-statistic {
     width: 15%;
   }
-  .event-list_normal-medium {
+  .but-wrapper {
     width: 100%;
+    text-align: center;
+  }
+  .event-list_normal-medium {
     text-align: center;
   }
   .event-list_normal-medium .event-list__item {
@@ -2820,6 +2858,20 @@ iframe {
   }
   .about-header_prev .about-header__header {
     font-size: 20px;
+  }
+  .l-filters__item {
+    width: 100%;
+  }
+  .l-filters__item:not(:last-child) {
+    margin-right: 0;
+  }
+  .l-filters__select {
+    width: 100%;
+  }
+  .l-filters__label,
+  .selectize-input.items.full.has-options.has-items,
+  .selectize-dropdown [data-selectable] {
+    font-size: 16px;
   }
 }
 @media (max-width: 400px) {

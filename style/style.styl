@@ -299,8 +299,8 @@
         text-transform uppercase
 
   &_normal-medium
-    margin-bottom 55px
-    width 68%
+    margin-bottom 15px
+    width 100%
     display: inline-block
 
     .event-list__item
@@ -1170,9 +1170,6 @@ iframe
   text-align left
   min-width 220px
   position relative
-  &.login
-    .user-cabinet__head:after
-      display inline-block
   &__img
     vertical-align middle
     border-radius 50%
@@ -1200,7 +1197,7 @@ iframe
       right 18px
       content ''
       background: url(../img/list_arrow.png) bottom center
-      display: none
+      display: inline-block
       width 9px
       height 6px
       margin-top -3px
@@ -1504,5 +1501,9 @@ iframe
     margin-top 10px
   .user-links
     margin-bottom 20px
-
+.but-wrapper
+  width 68%
+  .button
+    display: inline-block
+    margin-bottom 25px
 @require "media_960.styl"

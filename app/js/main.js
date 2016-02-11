@@ -124,28 +124,12 @@ sortBut.bind('click',function(){
 
 $(window).bind('load resize', function(){
 
-   if(everywhereDrop.length>0) { scrollInit(everywhereDrop.find('.l-sort__list')); }
 
-    if(everythingDrop.length>0) {
-        if ($(window).width() < 960) {
-            scrollInit(everythingDrop.find('.l-sort__list'));
+    if(everywhereDrop.length>0) {
+        if ($(window).width() > 959) {
+            scrollInit(everywhereDrop.find('.l-sort__list'));
         } else {
-            everythingDrop.find('.l-sort__list').mCustomScrollbar('destroy');
-        }
-    }
-    if(allTimeDrop.length>0) {
-        if ($(window).width() < 700) {
-            scrollInit(allTimeDrop.find('.l-sort__list'));
-        } else {
-            allTimeDrop.find('.l-sort__list').mCustomScrollbar('destroy');
-        }
-    }
-
-    if(listAside.length>0) {
-        if ($(window).width() < 700) {
-            scrollInit(listAside);
-        } else {
-            listAside.mCustomScrollbar('destroy');
+            everywhereDrop.find('.l-sort__list').mCustomScrollbar('destroy');
         }
     }
 });
