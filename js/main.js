@@ -12,7 +12,7 @@ var tabsAdmin = $('#tabs-block-admin');
 var sign = $('#sign');
 var butClose = $('#closeBut');
 var outerForm = $('.sign-tabs');
-
+var listAside = $('#concertListAside');
 
 function close(elem){
     if(butClose.is(elem) || outerForm.is(elem)) {
@@ -28,7 +28,6 @@ var scrollInit = function(elem){
     } else {
         elem.mCustomScrollbar({
             scrollbarPosition: 'inside',
-            autoHideScrollbar: true,
             autoDraggerLength: false
 
         });
@@ -139,6 +138,14 @@ $(window).bind('load resize', function(){
             scrollInit(allTimeDrop.find('.l-sort__list'));
         } else {
             allTimeDrop.find('.l-sort__list').mCustomScrollbar('destroy');
+        }
+    }
+
+    if(listAside.length>0) {
+        if ($(window).width() < 700) {
+            scrollInit(listAside);
+        } else {
+            listAside.mCustomScrollbar('destroy');
         }
     }
 });

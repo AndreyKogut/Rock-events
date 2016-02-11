@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="includes/jquery.fancybox.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto:700,500,400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="includes/responsive-tabs.css">
+    <link rel="stylesheet" href="includes/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
@@ -320,9 +321,9 @@
                     </div>
                     <div id="tab-4"> 4 </div>
                 </div>
-                <aside class="group-concerts-list f-r">
+                <aside  class="group-concerts-list f-r">
                     <h4 class="group-concerts-list__header calendar-icon-t">Next concerts</h4>
-                    <ul class="group-concerts-list__items">
+                    <ul id="concertListAside" class="group-concerts-list__items">
                         <li class="group-concerts-list__item ">
                             <a href="" class="group-concerts-list__link cf">
                                 <p class="group-concerts-list__place">
@@ -463,8 +464,11 @@
 </div>
 <div id="scrollTop"></div>
 <script src="includes/jquery.js"></script>
+<script src="includes/jquery.mCustomScrollbar.js"></script>
+<script src="includes/jquery.mousewheel.js"></script>
 <script src="includes/jquery.fancybox.pack.js"></script>
 <script src="includes/jquery.responsiveTabs.js"></script>
+
 <script src="js/main.js"></script>
 </body>
 </html>

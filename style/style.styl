@@ -263,7 +263,7 @@
         .event-list__link:after
           opacity: $gallery-bg-color-opacity-hover
     .event-list__group
-      font-size 35px
+      font-size 26px
       width 80%
       display: inline-block
       text-transform uppercase
@@ -302,18 +302,14 @@
     margin-bottom 55px
     width 68%
     display: inline-block
-    &:hover
-      .concert-header_preview
-        display none
+
     .event-list__item
       padding-right 30px
       margin-bottom 15px
       width 50%
       display inline-block
       position relative
-      &:hover
-        .event-list__link:after
-          opacity: $gallery-bg-color-opacity-hover
+
     .concert-header_preview
       display none
     .event-list__group
@@ -1112,6 +1108,7 @@ iframe
   &__description
     bottom: 60px
     left: 35px
+    right: 35px
     display: block
     position absolute
     z-index 1
@@ -1124,6 +1121,7 @@ iframe
   position absolute
   bottom 30px
   left 35px
+  right: 35px;
   z-index 13
   &__item
     display: inline-block
@@ -1188,6 +1186,9 @@ iframe
     background: $blue
     padding-right 35px
     border-radius 21px
+    &.login
+      .user-cabinet__head:after
+        display inline-block
     &.active
       border-bottom-left-radius 0
       border-bottom-right-radius 0
@@ -1199,7 +1200,7 @@ iframe
       right 18px
       content ''
       background: url(../img/list_arrow.png) bottom center
-      display: inline-block
+      display: none
       width 9px
       height 6px
       margin-top -3px
@@ -1294,7 +1295,6 @@ iframe
     font-size 15px
     vertical-align: top;
     width 170px
-    //display: inline-block
   &__item
     display: block
     width 100%
