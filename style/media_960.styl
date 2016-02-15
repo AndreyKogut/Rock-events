@@ -1,9 +1,9 @@
 @media (max-width: 960px)
+  .concert-header-button
+    float none
   .l-header__h
     margin-top: 80px
     font-size: 65px
-  .user-cabinet
-    float none
   .logo
     float none
     margin-bottom 15px
@@ -139,8 +139,7 @@
     overflow-x: scroll;
     white-space: nowrap;
   .event-list_aside .event-list__item
-    width: 100%;
-    max-width: 330px;
+    width: 330px;
     margin-right: 15px;
     white-space normal
     display: inline-block;
@@ -154,16 +153,43 @@
     margin 0 -15px
     .event-list__item
       padding 0 15px
-  .concert-header_preview,
-  .event-list_normal-medium .event-list__link:after
-    left 15px
-    right 15px
+  .event-list_normal,
+  .l-event-dated__h
+    margin-bottom 30px
+  .l-event-dated,
+  .l-events,
+  .l-filters
+    padding-top 30px
+    padding-bottom 30px
+  .l-about
+    padding-top 30px
+  .content-bg-white_margin-top
+    padding-bottom 30px
+  .about-header_head
+    margin-bottom 77px
+  #tab-1,
+  #tab-2,
+  #tab-3,
+  #tab-4,
+  #tab-5,
+  #tab-6
+    overflow-y: scroll
+  #tabs-block-admin .r-tabs-nav
+    display none
+  #tabs-block-admin .r-tabs-accordion-title
+    display: block
+  .l-admin
+    margin-top 30px
+    margin-bottom 30px
+  #tabs-block-admin .r-tabs-accordion-title.r-tabs-state-active
+    display: block
+    .r-tabs-anchor
+      background: $blue
 @media (max-width: 800px)
   .l-header__h
     margin-top: 80px
     font-size: 50px
   .user-cabinet
-    float none
     min-width 190px
     &__head
       padding: 4px 5px;
@@ -180,20 +206,22 @@
     padding-bottom 40px
   .but-wrapper
     width 90%
-  #tabs-block .r-tabs-accordion-title.r-tabs-state-active
-    display block
+
+
 @media (max-width: 700px)
+  .navigation__items
+    display: inline-block
+    width 100%
   #allTime .l-sort__list
     overflow-y: scroll;
   .l-header__h
     font-size 30px
   .l-header__text
     font-size 18px
-  .user-cabinet
-    float: right
   .navigation
     &__items
       display none
+      margin-top 10px
     &__item
       display: block
     &__burger
@@ -220,10 +248,11 @@
   .l-sort__allTime
     display: none
   #everything,
-  #everywhere,
-  #allTime
+  #everywhere
     width 100%
     margin-bottom 15px
+  #allTime
+    width 100%
   .gallery-group
     text-align center
   .gallery-group__item
@@ -266,6 +295,10 @@
   .l-concert
     padding-top 20px
     padding-bottom 20px
+  .concert-header__list
+    width 100%
+  .profile-form__item
+    width 100%
 @media (max-width: 600px)
   .about-header_prev
     text-align center
@@ -290,6 +323,9 @@
   .selectize-input.items.full.has-options.has-items,
   .selectize-dropdown [data-selectable]
     font-size 16px
+  .filtered-element
+    padding 15px 0
+
 @media (max-width: 400px)
   .l-header__h
     margin-top: 80px
@@ -317,8 +353,6 @@
     &:nth-child(2)
       display: inline-block
   .concert-header
-    &__h
-      font-size 18px
     &__country,
     &__date,
     &__price
@@ -339,3 +373,13 @@
     font-size 12px
   .event-list_normal-big .event-list__group
     font-size 18px
+  .sign-tabs-wrapper #tabs-block
+    width 100%
+    overflow-y: scroll;
+    height 100%
+  .sign-tabs-wrapper
+    padding-top 15px
+    padding-bottom 15px
+  #closeBut
+    width 18px
+    height 18px

@@ -12,7 +12,9 @@ var tabsAdmin = $('#tabs-block-admin');
 var sign = $('#sign');
 var butClose = $('#closeBut');
 var outerForm = $('.sign-tabs');
-var listAside = $('#concertListAside');
+var burger = $('.navigation__burger');
+var navigation = $('.navigation');
+var cabHead = $('.user-cabinet__head');
 
 function close(elem){
     if(butClose.is(elem) || outerForm.is(elem)) {
@@ -21,6 +23,18 @@ function close(elem){
 
     }
 };
+
+burger.click(function(){
+    navigation.toggleClass('active');
+    if(navigation.hasClass('active')) {
+        $('.navigation__items').hide().slideDown();
+    } else {
+        $('.navigation__items').slideUp();
+    }
+
+
+
+});
 
 var scrollInit = function(elem){
     if(!elem.length > 0) {
@@ -34,7 +48,7 @@ var scrollInit = function(elem){
     }
 };
 
-userCab.bind('click', function(){
+userCab.bind('click', function(e){
 
     var  but = this;
     if(!$(but).find('.user-cabinet__head').hasClass('active')) {
@@ -48,10 +62,19 @@ userCab.bind('click', function(){
 
 });
 
+
+
 $(document).bind('mousedown', function(e){
     close(e.target);
 });
+
+$(document).bind('touchstart resize',function(e){
+    if(!(cabHead).is(e.target) && $(cabHead).hasClass('active') ) {
+        userCab.trigger('click');
+    }
+});
 $(document).bind('mouseup resize',function (e){
+
 
 
     if (everywhereDrop.is(e.target)) {
@@ -132,22 +155,24 @@ $(window).bind('load resize', function(){
             everywhereDrop.find('.l-sort__list').mCustomScrollbar('destroy');
         }
     }
-});
-
-(function formScrollInit(){
 
     if(!(scroll.length > 0)) {
         return;
     } else {
-        scroll.mCustomScrollbar({
-            scrollbarPosition: 'outside',
-            autoHideScrollbar : true,
-            live: 'true',
-            alwaysShowScrollbar: 0,
-            autoExpandScrollbar: true
-        });
+        if($(window).width() > 959) {
+            scroll.mCustomScrollbar({
+                scrollbarPosition: 'outside',
+                autoHideScrollbar: true,
+                live: 'true',
+                alwaysShowScrollbar: 0,
+                autoExpandScrollbar: true
+            });
+        } else {
+            scroll.mCustomScrollbar('destroy');
+        }
     }
-})();
+});
+
 
 (function fancyInit(){
     if(!(fancyBox.length > 0)) {
@@ -166,7 +191,8 @@ $(window).bind('load resize', function(){
             rotate: false,
             animation: 'slide',
             startCollapsed: 'accordion',
-            enabled: 0
+            enabled: 0,
+            setHash: true
         })
     }
 })();
@@ -179,9 +205,23 @@ $(window).bind('load resize', function(){
             scrollToAccordion: true,
             rotate: false,
             animation: 'slide',
-            enabled: 0
+            startCollapsed: 'accordion',
+            enabled: 0,
+            setHash: true
         })
     }
 })();
 
+
+//for like active
+
+(function(){
+    if(!($('.like-icon-t').length > 0)) {
+        return;
+    } else {
+        $('.like-icon-t').click( function(){
+            $(this).toggleClass('active');
+        });
+    }
+})();
 

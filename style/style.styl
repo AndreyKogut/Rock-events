@@ -4,14 +4,17 @@
 
 
 .navigation
+  &.active
+    .navigation__items
+      display: inline-block
   &__items
     display: inline-block
   &__item
     display: inline-block
     position relative
   &__burger
-    width 18px
-    height 18px
+    width 30px
+    height 30px
     display: none
     margin-left 10px
     vertical-align middle
@@ -248,11 +251,9 @@
       .event-list__place
         margin-top 12px
 
-
-
   &_normal-big
     margin 0 -15px
-    margin-bottom 55px
+    margin-bottom 0
     .event-list__item
       padding 0 15px
       margin-bottom 15px
@@ -321,15 +322,16 @@
       position absolute
       bottom 38%
       left 0
-      right 30px
+      right 0
       text-align center
       max-width 100%
     .event-list__link
+      position relative
       &:after
         top: 0
         bottom: 0
         left: 0
-        right: 30px
+        right: 0
         background none
         background :$gallery-bg-color
         opacity: $gallery-bg-color-opacity
@@ -341,7 +343,7 @@
       position absolute
       bottom 25px
       left: 0
-      right 30px
+      right 0
       z-index 5
     .event-list__groups-count
       color #fff
@@ -413,6 +415,9 @@
     z-index 3
     padding 8px 19px
     font-size 14px
+    &:before
+      content '$'
+      display: inline-block
   &__but
     position absolute
     border-radius  32px
@@ -539,6 +544,7 @@
   &__h
     line-height 1
     margin-bottom 10px
+    font-size 36px
   .event-list__link
     position relative
   &__followers
@@ -556,7 +562,7 @@
     position absolute
     bottom 15%
     left 0
-    right 30px
+    right 0
     text-align center
     max-width 100%
     z-index 5
@@ -564,7 +570,7 @@
     .concert-header__date,
     .concert-header__price
       color #ffffff
-      font-size 15px
+      font-size 16px
       display inline-block
       vertical-align middle
       text-align center
@@ -575,12 +581,14 @@
       padding-top 10px
     .concert-header__place,
     .concert-header__time
-      font-size 15px
+      font-size 16px
       display inline-block
+    .concert-header__place
+      margin-left 5px
   &__groups-count
     color #fff
   &-button
-    margin-top 8px
+    margin-top 6px
   &__img
     width 31.6%
     display: inline-block
@@ -593,7 +601,6 @@
     padding-left 30px
     box-sizing border-box
   &__h
-    font-size 26px
     color #ffffff
     font-weight 700
   &__description
@@ -904,7 +911,7 @@ iframe
       background-image url(../img/band-sprite-icons-hover.png)
     &_border
       border 2px solid #fff
-      border-radius 32px
+      border-radius 50%
       padding: 0 5px
       cursor pointer
       &.active,
@@ -917,6 +924,9 @@ iframe
       color $dark-white
       font-size 12px
       padding-left 16px
+      &:after
+        content ' fans'
+        display: inline-block
   &__but
     border: 1px solid $medium-purple;
     border-radius: 32px;
@@ -978,6 +988,9 @@ iframe
     color $medium-purple
     display: inline-block
     margin-top 10px
+    &:before
+      content '$'
+      display: inline-block
 .content-bg-white
   background: rgba(255,255,255,.05)
   display block
@@ -1069,6 +1082,7 @@ iframe
       color $medium-purple-disabled
   &__link
     color $medium-purple
+    word-break: break-word;
     &:hover
       color #fff
   &__body
@@ -1253,7 +1267,8 @@ iframe
 .selectize-dropdown .active
   padding: 3px 8px;
   padding-left: 19px;
-  font-size: 12px;
+  font-size: 14px;
+  line-height 1.5
   color $medium-purple
   border-top:1px solid rgba(255,255,255,.03)
 .selectize-dropdown .active,
@@ -1303,41 +1318,59 @@ iframe
     display table-cell
     vertical-align middle
   &__link
-    display: table
-    width 100%
-    padding: 0 22px;
-    height 100%
-    overflow hidden
-    vertical-align middle
-    box-sizing border-box
-    background: #1a1822
-    font-size 19px
-    color #fff
-    &:hover
-      background: #322e42
-    &_log-out
-      background #111018
-  #tab-1,
-  #tab-2,
-  #tab-3,
-  #tab-4,
-  #tab-5,
-  #tab-6
-    width 100%
-    max-height 606px
-    font-size 15px
-    box-sizing border-box;
-    vertical-align top
-    display none
-    padding 25px
-    .r-tabs-panel.r-tabs-state-active
-      display table-cell
-    .mCSB_scrollTools .mCSB_draggerContainer
-      height  100%
-    .mCSB_outside + .mCSB_scrollTools
-      right 10px
-      top 25px
-      bottom 25px
+     display: table
+     width 100%
+     padding: 0 22px;
+     height 100%
+     overflow hidden
+     vertical-align middle
+     box-sizing border-box
+     background: #1a1822
+     font-size 19px
+     color #fff
+     &:hover
+       background: #322e42
+     &_log-out
+       background #111018
+#tabs-block-admin .r-tabs-accordion-title .r-tabs-anchor
+  display: table
+  width 100%
+  padding: 0 22px;
+  height 100%
+  overflow hidden
+  vertical-align middle
+  box-sizing border-box
+  background: #1a1822
+  font-size 19px
+  color #fff
+  &:hover
+    background: #322e42
+  &_log-out
+    background #111018
+#tabs-block-admin .r-tabs-accordion-title .r-tabs-anchor
+  padding-top 20px
+  padding-bottom 20px
+#tab-1,
+#tab-2,
+#tab-3,
+#tab-4,
+#tab-5,
+#tab-6
+  width 100%
+  max-height 606px
+  font-size 15px
+  box-sizing border-box;
+  vertical-align top
+  display none
+  padding 25px
+  .r-tabs-panel.r-tabs-state-active
+    display table-cell
+  .mCSB_scrollTools .mCSB_draggerContainer
+    height  100%
+  .mCSB_outside + .mCSB_scrollTools
+    right 10px
+    top 25px
+    bottom 25px
 .img-wrapper
   display: inline-block
   border-radius 50%
@@ -1350,12 +1383,11 @@ iframe
   background $blue
   text-decoration none
 
-.r-tabs-accordion-title.r-tabs-state-active
+#tabs-block-admin .r-tabs-accordion-title.r-tabs-state-active
   display none
-.r-tabs-accordion-title
+#tabs-block-admin .r-tabs-accordion-title
   display: none
 // end
-
 
 .l-profile
   &__img
@@ -1506,4 +1538,8 @@ iframe
   .button
     display: inline-block
     margin-bottom 25px
+.sign-tabs .r-tabs-accordion-title
+  display: none
+body
+  cursor pointer
 @require "media_960.styl"

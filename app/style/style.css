@@ -583,12 +583,15 @@ body {
 }
 .doors-icon-t:before {
   content: '';
-  width: 35px;
+  width: 22px;
   height: 35px;
   display: inline-block;
   background: url("../img/login-icon.png") center center no-repeat;
   vertical-align: middle;
   margin-right: 10px;
+}
+.navigation.active .navigation__items {
+  display: inline-block;
 }
 .navigation__items {
   display: inline-block;
@@ -598,8 +601,8 @@ body {
   position: relative;
 }
 .navigation__burger {
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
   display: none;
   margin-left: 10px;
   vertical-align: middle;
@@ -906,7 +909,7 @@ body {
 }
 .event-list_normal-big {
   margin: 0 -15px;
-  margin-bottom: 55px;
+  margin-bottom: 0;
 }
 .event-list_normal-big .event-list__item {
   padding: 0 15px;
@@ -984,15 +987,18 @@ body {
   position: absolute;
   bottom: 38%;
   left: 0;
-  right: 30px;
+  right: 0;
   text-align: center;
   max-width: 100%;
+}
+.event-list_normal-medium .event-list__link {
+  position: relative;
 }
 .event-list_normal-medium .event-list__link:after {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 30px;
+  right: 0;
   background: none;
   background: #003a76;
   opacity: 0.7;
@@ -1007,7 +1013,7 @@ body {
   position: absolute;
   bottom: 25px;
   left: 0;
-  right: 30px;
+  right: 0;
   z-index: 5;
 }
 .event-list_normal-medium .event-list__groups-count {
@@ -1095,6 +1101,10 @@ body {
   z-index: 3;
   padding: 8px 19px;
   font-size: 14px;
+}
+.event-list__price:before {
+  content: '$';
+  display: inline-block;
 }
 .event-list__but {
   position: absolute;
@@ -1254,6 +1264,7 @@ body {
 .concert-header__h {
   line-height: 1;
   margin-bottom: 10px;
+  font-size: 36px;
 }
 .concert-header .event-list__link {
   position: relative;
@@ -1275,7 +1286,7 @@ body {
   position: absolute;
   bottom: 15%;
   left: 0;
-  right: 30px;
+  right: 0;
   text-align: center;
   max-width: 100%;
   z-index: 5;
@@ -1284,7 +1295,7 @@ body {
 .concert-header_preview .concert-header__date,
 .concert-header_preview .concert-header__price {
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
   vertical-align: middle;
   text-align: center;
@@ -1297,14 +1308,17 @@ body {
 }
 .concert-header_preview .concert-header__place,
 .concert-header_preview .concert-header__time {
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
+}
+.concert-header_preview .concert-header__place {
+  margin-left: 5px;
 }
 .concert-header__groups-count {
   color: #fff;
 }
 .concert-header-button {
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .concert-header__img {
   width: 31.6%;
@@ -1322,7 +1336,6 @@ body {
           box-sizing: border-box;
 }
 .concert-header__h {
-  font-size: 26px;
   color: #fff;
   font-weight: 700;
 }
@@ -1711,8 +1724,8 @@ iframe {
 }
 .group-statistic__link_border {
   border: 2px solid #fff;
-  -webkit-border-radius: 32px;
-          border-radius: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
   padding: 0 5px;
   cursor: pointer;
 }
@@ -1727,6 +1740,10 @@ iframe {
   color: #adacaf;
   font-size: 12px;
   padding-left: 16px;
+}
+.group-statistic__link_fans:after {
+  content: ' fans';
+  display: inline-block;
 }
 .group-statistic__but {
   border: 1px solid #9996c4;
@@ -1805,6 +1822,10 @@ iframe {
   color: #9996c4;
   display: inline-block;
   margin-top: 10px;
+}
+.group-concerts-list__price:before {
+  content: '$';
+  display: inline-block;
 }
 .content-bg-white {
   background: rgba(255,255,255,0.05);
@@ -1902,6 +1923,7 @@ iframe {
 }
 .tabs-list__link {
   color: #9996c4;
+  word-break: break-word;
 }
 .tabs-list__link:hover {
   color: #fff;
@@ -2142,7 +2164,8 @@ iframe {
 .selectize-dropdown .active {
   padding: 3px 8px;
   padding-left: 19px;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.5;
   color: #9996c4;
   border-top: 1px solid rgba(255,255,255,0.03);
 }
@@ -2219,12 +2242,35 @@ iframe {
 .l-admin__link_log-out {
   background: #111018;
 }
-.l-admin #tab-1,
-.l-admin #tab-2,
-.l-admin #tab-3,
-.l-admin #tab-4,
-.l-admin #tab-5,
-.l-admin #tab-6 {
+#tabs-block-admin .r-tabs-accordion-title .r-tabs-anchor {
+  display: table;
+  width: 100%;
+  padding: 0 22px;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #1a1822;
+  font-size: 19px;
+  color: #fff;
+}
+#tabs-block-admin .r-tabs-accordion-title .r-tabs-anchor:hover {
+  background: #322e42;
+}
+#tabs-block-admin .r-tabs-accordion-title .r-tabs-anchor_log-out {
+  background: #111018;
+}
+#tabs-block-admin .r-tabs-accordion-title .r-tabs-anchor {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#tab-1,
+#tab-2,
+#tab-3,
+#tab-4,
+#tab-5,
+#tab-6 {
   width: 100%;
   max-height: 606px;
   font-size: 15px;
@@ -2234,28 +2280,28 @@ iframe {
   display: none;
   padding: 25px;
 }
-.l-admin #tab-1 .r-tabs-panel.r-tabs-state-active,
-.l-admin #tab-2 .r-tabs-panel.r-tabs-state-active,
-.l-admin #tab-3 .r-tabs-panel.r-tabs-state-active,
-.l-admin #tab-4 .r-tabs-panel.r-tabs-state-active,
-.l-admin #tab-5 .r-tabs-panel.r-tabs-state-active,
-.l-admin #tab-6 .r-tabs-panel.r-tabs-state-active {
+#tab-1 .r-tabs-panel.r-tabs-state-active,
+#tab-2 .r-tabs-panel.r-tabs-state-active,
+#tab-3 .r-tabs-panel.r-tabs-state-active,
+#tab-4 .r-tabs-panel.r-tabs-state-active,
+#tab-5 .r-tabs-panel.r-tabs-state-active,
+#tab-6 .r-tabs-panel.r-tabs-state-active {
   display: table-cell;
 }
-.l-admin #tab-1 .mCSB_scrollTools .mCSB_draggerContainer,
-.l-admin #tab-2 .mCSB_scrollTools .mCSB_draggerContainer,
-.l-admin #tab-3 .mCSB_scrollTools .mCSB_draggerContainer,
-.l-admin #tab-4 .mCSB_scrollTools .mCSB_draggerContainer,
-.l-admin #tab-5 .mCSB_scrollTools .mCSB_draggerContainer,
-.l-admin #tab-6 .mCSB_scrollTools .mCSB_draggerContainer {
+#tab-1 .mCSB_scrollTools .mCSB_draggerContainer,
+#tab-2 .mCSB_scrollTools .mCSB_draggerContainer,
+#tab-3 .mCSB_scrollTools .mCSB_draggerContainer,
+#tab-4 .mCSB_scrollTools .mCSB_draggerContainer,
+#tab-5 .mCSB_scrollTools .mCSB_draggerContainer,
+#tab-6 .mCSB_scrollTools .mCSB_draggerContainer {
   height: 100%;
 }
-.l-admin #tab-1 .mCSB_outside + .mCSB_scrollTools,
-.l-admin #tab-2 .mCSB_outside + .mCSB_scrollTools,
-.l-admin #tab-3 .mCSB_outside + .mCSB_scrollTools,
-.l-admin #tab-4 .mCSB_outside + .mCSB_scrollTools,
-.l-admin #tab-5 .mCSB_outside + .mCSB_scrollTools,
-.l-admin #tab-6 .mCSB_outside + .mCSB_scrollTools {
+#tab-1 .mCSB_outside + .mCSB_scrollTools,
+#tab-2 .mCSB_outside + .mCSB_scrollTools,
+#tab-3 .mCSB_outside + .mCSB_scrollTools,
+#tab-4 .mCSB_outside + .mCSB_scrollTools,
+#tab-5 .mCSB_outside + .mCSB_scrollTools,
+#tab-6 .mCSB_outside + .mCSB_scrollTools {
   right: 10px;
   top: 25px;
   bottom: 25px;
@@ -2271,10 +2317,10 @@ iframe {
   background: #2089f4;
   text-decoration: none;
 }
-.r-tabs-accordion-title.r-tabs-state-active {
+#tabs-block-admin .r-tabs-accordion-title.r-tabs-state-active {
   display: none;
 }
-.r-tabs-accordion-title {
+#tabs-block-admin .r-tabs-accordion-title {
   display: none;
 }
 .l-profile__img {
@@ -2471,13 +2517,19 @@ iframe {
   display: inline-block;
   margin-bottom: 25px;
 }
+.sign-tabs .r-tabs-accordion-title {
+  display: none;
+}
+body {
+  cursor: pointer;
+}
 @media (max-width: 960px) {
+  .concert-header-button {
+    float: none;
+  }
   .l-header__h {
     margin-top: 80px;
     font-size: 65px;
-  }
-  .user-cabinet {
-    float: none;
   }
   .logo {
     float: none;
@@ -2665,8 +2717,7 @@ iframe {
     white-space: nowrap;
   }
   .event-list_aside .event-list__item {
-    width: 100%;
-    max-width: 330px;
+    width: 330px;
     margin-right: 15px;
     white-space: normal;
     display: inline-block;
@@ -2685,10 +2736,48 @@ iframe {
   .event-list_normal-medium .event-list__item {
     padding: 0 15px;
   }
-  .concert-header_preview,
-  .event-list_normal-medium .event-list__link:after {
-    left: 15px;
-    right: 15px;
+  .event-list_normal,
+  .l-event-dated__h {
+    margin-bottom: 30px;
+  }
+  .l-event-dated,
+  .l-events,
+  .l-filters {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .l-about {
+    padding-top: 30px;
+  }
+  .content-bg-white_margin-top {
+    padding-bottom: 30px;
+  }
+  .about-header_head {
+    margin-bottom: 77px;
+  }
+  #tab-1,
+  #tab-2,
+  #tab-3,
+  #tab-4,
+  #tab-5,
+  #tab-6 {
+    overflow-y: scroll;
+  }
+  #tabs-block-admin .r-tabs-nav {
+    display: none;
+  }
+  #tabs-block-admin .r-tabs-accordion-title {
+    display: block;
+  }
+  .l-admin {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #tabs-block-admin .r-tabs-accordion-title.r-tabs-state-active {
+    display: block;
+  }
+  #tabs-block-admin .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+    background: #2089f4;
   }
 }
 @media (max-width: 800px) {
@@ -2697,7 +2786,6 @@ iframe {
     font-size: 50px;
   }
   .user-cabinet {
-    float: none;
     min-width: 190px;
   }
   .user-cabinet__head {
@@ -2721,11 +2809,12 @@ iframe {
   .but-wrapper {
     width: 90%;
   }
-  #tabs-block .r-tabs-accordion-title.r-tabs-state-active {
-    display: block;
-  }
 }
 @media (max-width: 700px) {
+  .navigation__items {
+    display: inline-block;
+    width: 100%;
+  }
   #allTime .l-sort__list {
     overflow-y: scroll;
   }
@@ -2735,11 +2824,9 @@ iframe {
   .l-header__text {
     font-size: 18px;
   }
-  .user-cabinet {
-    float: right;
-  }
   .navigation__items {
     display: none;
+    margin-top: 10px;
   }
   .navigation__item {
     display: block;
@@ -2776,10 +2863,12 @@ iframe {
     display: none;
   }
   #everything,
-  #everywhere,
-  #allTime {
+  #everywhere {
     width: 100%;
     margin-bottom: 15px;
+  }
+  #allTime {
+    width: 100%;
   }
   .gallery-group {
     text-align: center;
@@ -2839,6 +2928,12 @@ iframe {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .concert-header__list {
+    width: 100%;
+  }
+  .profile-form__item {
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .about-header_prev {
@@ -2872,6 +2967,9 @@ iframe {
   .selectize-input.items.full.has-options.has-items,
   .selectize-dropdown [data-selectable] {
     font-size: 16px;
+  }
+  .filtered-element {
+    padding: 15px 0;
   }
 }
 @media (max-width: 400px) {
@@ -2909,9 +3007,6 @@ iframe {
   .about-header_prev .about-header__style:nth-child(2) {
     display: inline-block;
   }
-  .concert-header__h {
-    font-size: 18px;
-  }
   .concert-header__country,
   .concert-header__date,
   .concert-header__price {
@@ -2936,5 +3031,18 @@ iframe {
   }
   .event-list_normal-big .event-list__group {
     font-size: 18px;
+  }
+  .sign-tabs-wrapper #tabs-block {
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .sign-tabs-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  #closeBut {
+    width: 18px;
+    height: 18px;
   }
 }
