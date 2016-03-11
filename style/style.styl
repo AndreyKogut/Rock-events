@@ -362,16 +362,12 @@
           display block
         .concert-header_preview
           display block
-
   &_aside
     .event-list__item
       padding 0
       margin-top: 15px
       display block
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.53);
-      &:hover
-        .event-list__link:before
-          display none
     .event-list__price
       top 11px
       right  11px
@@ -391,6 +387,7 @@
         left: 0
         right: 0
         background: $grad-hover-bg
+        display: block
       &:after
         top: 0
         bottom: 0
@@ -476,9 +473,11 @@
     &:last-child
       padding-right 0
   &__link
-    display: block
     padding 10px
     background: rgba(255,255,255,0.1)
+    display: inline-block;
+    height: 100%;
+    vertical-align: top;
     &:hover
       background: rgba(255,255,255,0.2)
       text-decoration none
@@ -901,7 +900,7 @@ iframe
     &:not(:last-child)
       margin-right 20px
   &__link
-    line-height 25px
+    line-height: 1.1
     font-size 14px
     color #fff
     display: block
@@ -912,7 +911,7 @@ iframe
     &_border
       border 2px solid #fff
       border-radius 50%
-      padding: 0 5px
+      padding: 5px
       cursor pointer
       &.active,
       &:hover
@@ -925,12 +924,13 @@ iframe
       font-size 12px
       padding-left 16px
       &:after
-        content ' fans'
+        content 'fans'
+        margin-left 5px
         display: inline-block
   &__but
     border: 1px solid $medium-purple;
     border-radius: 32px;
-    padding: 0 21px;
+    padding: 4px 21px;
     color $medium-purple
     text-transform uppercase
     &:hover
@@ -1072,14 +1072,15 @@ iframe
   width 100%
   &__header
     background: rgba(0,0,0,.3)
-  &__row
-    text-indent 15px
   &__td
     font-size 14px
     color $medium-purple
     line-height 2.5
+    padding 0 10px
     &_dark
       color $medium-purple-disabled
+    &:last-child
+      text-align center
   &__link
     color $medium-purple
     word-break: break-word;
@@ -1293,7 +1294,6 @@ iframe
   text-align center
   .group-statistic__link_border
     display: inline-block
-    margin-top 50px
     cursor pointer
 .con-list-wrapper
   width 65%
@@ -1540,6 +1540,4 @@ iframe
     margin-bottom 25px
 .sign-tabs .r-tabs-accordion-title
   display: none
-body
-  cursor pointer
 @require "media_960.styl"

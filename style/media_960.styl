@@ -206,7 +206,9 @@
     padding-bottom 40px
   .but-wrapper
     width 90%
-
+  .button_medium
+    padding: 2px 18px;
+    font-size: 12px;
 
 @media (max-width: 700px)
   .navigation__items
@@ -224,10 +226,12 @@
       margin-top 10px
     &__item
       display: block
+      &:not(:last-child)
+        margin-bottom 5px
     &__burger
       display: inline-block
       float left
-      margin-top: 10px;
+      margin-top: 5px;
   .button_big
     padding: 15px 26px;
     font-size: 15px;
@@ -268,6 +272,7 @@
     font-size 26px
   .filtered-element .group-statistic__item
     margin 0
+    margin-bottom 5px
   .filtered-element .group-statistic__item_text
     display: block
     .group-statistic__link
@@ -357,6 +362,7 @@
     &__date,
     &__price
       font-size 13px
+      padding 5px 0
     &__followers
       font-size 12px
   .concert-header_preview .concert-header
@@ -383,3 +389,11 @@
   #closeBut
     width 18px
     height 18px
+  .clock
+    &__item
+      line-height: 55px
+      font-size 24px
+      &:after
+        font-size 10px
+    &__number
+      width 55px

@@ -13,7 +13,7 @@ var sign = $('#sign');
 var butClose = $('#closeBut');
 var outerForm = $('.sign-tabs');
 var burger = $('.navigation__burger');
-var navigation = $('.navigation');
+var navigation = $('.navigation:first-child');
 var cabHead = $('.user-cabinet__head');
 
 function close(elem){
@@ -27,12 +27,10 @@ function close(elem){
 burger.click(function(){
     navigation.toggleClass('active');
     if(navigation.hasClass('active')) {
-        $('.navigation__items').hide().slideDown();
+        navigation.find('.navigation__items').hide().slideDown();
     } else {
-        $('.navigation__items').slideUp();
+        navigation.find('.navigation__items').slideUp();
     }
-
-
 
 });
 

@@ -23,6 +23,7 @@
     "responsive-tabs": "^1.5.2",
     "animate.css": "animate-css#^3.5.1",
     "selectize": "^0.12.1",
-    "jquery-validation": "^1.14.0"
+    "jquery-validation": "^1.14.0",
+    "normalize-css": "^3.0.3"
   }
 }
