@@ -350,7 +350,7 @@ body {
   width: 15px;
   height: 14px;
   background: url("../img/band-sprite-icons.png") -8px center no-repeat;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 .lfm-icon:before {
   content: '';

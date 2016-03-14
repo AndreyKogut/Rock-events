@@ -223,3 +223,42 @@ $(window).bind('load resize', function(){
     }
 })();
 
+var elem = $(".clock__number");
+
+if(elem.length) {
+
+    var days = elem.eq(0);
+
+    var hours = elem.eq(1);
+
+    var minutes = elem.eq(2);
+
+    (function () {
+        var interval = setInterval(function () {
+
+            minutes.text(+minutes.text() <= 10 ? "0" + (minutes.text() - 1) : +minutes.text() - 1);
+
+            if (!+minutes.text()) {
+                if (hours.text() > 0) {
+                    minutes.text(59);
+                    hours.text(+hours.text() <= 10 ? "0" + (hours.text() - 1) : +hours.text() - 1);
+                    if (+hours.text() <= 0) {
+                        if (+days.text() > 0) {
+                            hours.text(23);
+                            days.text(+days.text() <= 10 ? "0" + (days.text() - 1) : +days.text() - 1);
+
+                            if (+days.text() <= 0) days.text("00");
+                        } else {
+                            hours.text("00");
+                        }
+                    }
+                } else
+                    clearInterval(interval);
+            }
+
+        }, 1000 * 60);
+
+    })();
+}
+
+
